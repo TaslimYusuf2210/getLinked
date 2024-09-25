@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply bg-gradient-to-r from-customPurple-light to-customPurple-dark rounded font-medium;
+  }
+  .q-mark {
+    @apply font-madeTommyOutline font-medium absolute;
+  }
+  .text-xsm {
+    @apply text-[13px]
+  }
+  .input-border {
+    @apply bg-customPurple-darker border h-12 w-full border-white rounded-[4px] text-base px-8;
+  }
+}
