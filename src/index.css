@@ -13,6 +13,6 @@
     @apply text-[13px]
   }
   .input-border {
-    @apply bg-customPurple-darker border h-12 w-full border-white rounded-[4px] text-base px-8;
+    @apply bg-customPurple-darker border h-12 w-full border-white rounded-[4px] text-base ;
   }
 }
