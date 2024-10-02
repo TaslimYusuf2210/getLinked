@@ -4,23 +4,23 @@ import judgeImage from "../assets/judgeimage.svg"
 
 function Info() {
   return ( 
-    <div className="text-center">
-      <div>
+    <div className="text-center mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="grid">
           <img className="place-self-center" src={bigIdea} alt="big idea" />
         </div>
-        <div className="m-8">
+        <div className="m-8 place-self-center w-[300px] md:text-left md:w-auto">
           <h5 className="font-clashDisplay text-xl font-bold">Introduction to getlinked <br />
           <span className="text-customPurple"> tech Hackathon 1.0</span></h5>
           <p className="text-xsm font-montserrat leading-8">
-          Our tech hackathon is a melting pot of <br />
-          visionaries, and its purpose is as clear as <br />
-          day: to shape the future. Whether you're <br />
-          a coding genius, a design maverick, or a <br />
-          concept wizard, you'll have the chance to <br />
-          transform your ideas into reality. Solving <br />
-          real-world problems, pushing the boundaries <br />
-          of technology, and creating solutions that can <br />
+          Our tech hackathon is a melting pot of 
+          visionaries, and its purpose is as clear as 
+          day: to shape the future. Whether you're 
+          a coding genius, a design maverick, or a 
+          concept wizard, you'll have the chance to 
+          transform your ideas into reality. Solving 
+          real-world problems, pushing the boundaries 
+          of technology, and creating solutions that can 
           change the world, that's what we're all about!
           </p>
         </div>
@@ -45,11 +45,11 @@ function Info() {
           </p>
         </div>
       </div>
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="grid">
           <img src={judgeImage} alt="image" className="place-self-center" />
         </div>
-        <div className="m-8">
+        <div className="m-8 md:text-left">
           <h5 className="font-clashDisplay text-xl font-bold">Judging Criteria<br />
           <span className="text-customPurple">Key attributes</span></h5>
           <div className="text-xsm font-montserrat leading-6">
