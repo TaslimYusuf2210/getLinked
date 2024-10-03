@@ -25,11 +25,11 @@ function Info() {
           </p>
         </div>
       </div>
-      <div>
-        <div className="grid">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid md:order-2">
           <img src={rulesImage} alt="image" className="place-self-center" />
         </div>
-        <div className="m-8">
+        <div className="m-8 place-self-center w-[300px] md:order-1 md:text-left md:w-auto">
           <h5 className="font-clashDisplay text-xl font-bold">Rules and<br />
           <span className="text-customPurple">Guidelines</span></h5>
           <p className="text-xsm font-montserrat leading-8">
@@ -90,6 +90,7 @@ function Info() {
               other competition-specific requirements.
             </div>
           </div>
+          <button className="button py-[18px] w-44 mt-4">Read More</button>
         </div>
       </div>
     </div>
