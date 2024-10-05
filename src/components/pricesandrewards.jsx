@@ -10,11 +10,13 @@ function PricesAndReward() {
           <p className="text-sm">Highlight of the prizes or rewards for winners <br />
           and for participants.</p>
         </div>
-        <div className="grid place-items-center mt-12">
-          <img src={cup} alt="cup"/>
-        </div>
-        <div className="grid place-items-center mt-12">
-          <img src={rewards} alt="rewards"/>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid place-items-center mt-12">
+            <img src={cup} alt="cup"/>
+          </div>
+          <div className="grid place-items-center mt-12">
+            <img src={rewards} alt="rewards"/>
+          </div>
         </div>
       </div>
     </div>

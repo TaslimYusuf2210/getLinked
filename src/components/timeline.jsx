@@ -49,7 +49,7 @@ function Timeline() {
           anticipate using for the upcoming event.
         </p>
       </div>
-      <div>
+      <div className="w-[350px]">
         {timelineData.map((item, index) => (
           <Timelineprops
           key={index}

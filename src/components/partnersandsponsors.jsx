@@ -1,3 +1,5 @@
+import sponsors from "../assets/sponsors.svg"
+
 function PartnersAndSponsors() {
   return (
   <div>
@@ -6,6 +8,9 @@ function PartnersAndSponsors() {
           <h4 className="font-clashDisplay text-xl font-bold">Partners and Sponsors</h4>
           <p className="text-xs mt-2">Getlinked Hackathon 1.0 is honored to have the following major <br />
           companies as its partners and sponsors</p>
+        </div>
+        <div className="grid mt-6">
+          <img className="place-self-center w-[90%]" src={sponsors} alt="sponsors" />
         </div>
     </div>
   </div>

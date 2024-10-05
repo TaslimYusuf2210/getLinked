@@ -45,11 +45,11 @@ function Info() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="grid">
-          <img src={judgeImage} alt="image" className="place-self-center" />
+      <div className="grid grid-cols-1">
+        <div className="grid md:order-2">
+          <img src={judgeImage} alt="image" className="place-self-center md:w-[60%]" />
         </div>
-        <div className="m-8 md:text-left">
+        <div className="m-8 md:order-1">
           <h5 className="font-clashDisplay text-xl font-bold">Judging Criteria<br />
           <span className="text-customPurple">Key attributes</span></h5>
           <div className="text-xsm font-montserrat leading-6">

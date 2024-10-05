@@ -7,8 +7,8 @@ import { FaLocationDot } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <div className="bg-[#100B20] text-left font-montserrat flex flex-col items-center py-12 mt-32 text-xs">
-      <div className="w-[270px]">
+    <div className="bg-[#100B20] text-left grid font-montserrat py-12 text-xs">
+      <div className="w-[370px] place-self-center grid grid-cols-1 gap-8 md:grid-cols-3 md:w-auto md:px-16 px-12">
         <div className="w-full">
           <h3 className="text-xl font-clashDisplay font-semibold">
             get<span className="text-customPurple">linked</span>
@@ -20,14 +20,14 @@ function Footer() {
             young and talented individuals in the field <br />
             of technology
           </p>
-        </div>
-        <div className="flex gap-3 items-start w-full mt-4">
-          <div  className="border-[0px] border-customPurple border-r-2 pr-3">
-            Terms of Use
+          <div className="flex gap-3 items-start w-full mt-10">
+            <div  className="border-[0px] border-customPurple border-r-2 pr-3">
+              Terms of Use
+            </div>
+            <p>Privacy Policy</p>
           </div>
-          <p>Privacy Policy</p>
         </div>
-        <div className="mt-4">
+        <div>
           <h6 className="text-customPurple text-sm font-semibold">Useful Links</h6>
           <ul className="list-none leading-8">
             <li>Overview</li>
@@ -42,8 +42,9 @@ function Footer() {
             <FaFacebookF className="text-xl"/>
             <FaLinkedinIn className="text-xl"/>
           </div>
-          <div>
-            <h6 className="text-customPurple text-sm font-semibold mt-16">Contact Us</h6>
+        </div>
+        <div>
+            <h6 className="text-customPurple text-sm font-semibold">Contact Us</h6>
             <div className="flex gap-4 mt-2">
               <FaPhoneVolume />
               <p>+234 679 81819</p>
@@ -56,12 +57,11 @@ function Footer() {
               Lagos State
             </p>
             </div>
-          </div>
-        </div>
-        <div className="text-center mt-16">
-          <p>All rights reserved. © getlinked Ltd.</p>
         </div>
       </div>
+        <div className="text-center mt-10">
+          <p>All rights reserved. © getlinked Ltd.</p>
+        </div>
     </div>
   );
 }

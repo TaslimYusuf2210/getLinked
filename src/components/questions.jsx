@@ -34,7 +34,7 @@ function Questions() {
     },
   ];
   return (
-    <div className="flex flex-col justify-center font-montserrat text-[12px]">
+    <div className="flex flex-col justify-center font-montserrat text-[12px] md:text-sm">
       <div className="text-center">
         <h4 className="font-clashDisplay text-xl font-bold">
           Frequently Ask <br />{" "}
@@ -56,11 +56,13 @@ function Questions() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center items-center mt-16">
-        <span className="q-mark z-0 text-[40px] text-[#A866FD] mb-[295px] ml-[5rem]">?</span>
-        <span className="q-mark text-6xl text-customPurple z-20 mb-[340px] mr-20">?</span>
-        <span className="q-mark text-[40px] text-[#A866FD] mb-[295px] mr-52">?</span>
-        <img className="z-10" src={thinking} alt="think" />
+      <div className="flex flex-col justify-center items-center mt-16">
+        <div>
+          <span className="q-mark z-0 text-[40px] text-[#A866FD] right-24 top-12  md">?</span>
+          <span className="q-mark text-6xl text-customPurple  right-10 top-8 z-20 ">?</span>
+          <span className="q-mark text-[40px] text-[#A866FD] left-2 top-12 z-20">?</span>
+        </div>
+        <img className="z-10 md:w-[60%]" src={thinking} alt="think" />
       </div>
     </div>
   );
