@@ -15,4 +15,16 @@
   .input-border {
     @apply bg-customPurple-darker border h-12 w-full border-white rounded-[4px] text-base ;
   }
+  /* 2px solid;
+  : linear-gradient(180deg, #9A39FF 0%, #FF29B9 100%); */
+  .gradient-button:hover {
+     border: 2px solid transparent;
+  border-radius: 4px;
+  background: 
+    linear-gradient(to right, #140d27, #140d27), 
+    linear-gradient(to right, #9A39FF , #FF29B9); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  }
+
 }

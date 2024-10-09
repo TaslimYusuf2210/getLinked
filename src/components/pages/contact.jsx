@@ -107,6 +107,9 @@ function Contact() {
           </div>
         </div>
       </div>
+      <div className="max-w-[]">
+
+      </div>
         <img className="absolute opacity-70 left-[175px] top-[20.5%] hidden md:block" src={leftFlare} alt="flare" />
       <div className="hidden md:grid md:grid-cols-2 md:h-screen md:px-10 py-32">
         <div className="grid grid-cols-1">

@@ -24,7 +24,7 @@ function Register() {
       </div>
       <div className="py-4 text-center md:text-left md:flex md:px-16 md:">
         <img
-          className="absolute top-0 z-0 bottom-2 md:left-28 md:mb-8"
+          className="absolute top-0 z-0 bottom-2 md:left-28 md:mb-8 md:hidden"
           src={purpleLensFlare}
           alt="gradient"
         />
