@@ -21,7 +21,10 @@ export default {
           dark: '#903AFF',
           darker: '#140d27',
         }, 
-      }
+      },
+      screens: {
+        'xl': '1512px', // Custom extra-large viewport size
+      },
     },
   },
   plugins: [],

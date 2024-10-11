@@ -37,15 +37,18 @@ function Registration() {
   };
 
   return (
-    <div className="font-montserrat py-6 px-16 md:text-left">
+    <div className="font-montserrat py-6 px-16 md:text-left lg:grid lg:grid-cols-2">
+      <div className="hidden lg:block w-4/5">
+      <img className="w-full" src={designer} alt="designer" />
+      </div>
       <div>
         <div className="text-left">
           <h6 className="text-customPurple font-clashDisplay font-bold md:font-semibold md:text-[32px]">
             Register
           </h6>
         </div>
-        <div className="grid place-items-center py-3 ">
-          <img className="md:w-4/5" src={designer} alt="designer" />
+        <div className="grid place-items-center lg:place-items-start py-3 ">
+          <img className="md:w-4/5 lg:hidden" src={designer} alt="designer" />
           <img className="w-2/4" src={movement} alt="movement" />
         </div>
         <div className="w-full">
@@ -155,7 +158,8 @@ function Registration() {
               </div>
             </div>
             <div className="text-center w-full mt-4">
-              <button className="button py-[18px] w-44">Submit</button>
+              <button className="button hidden lg:block font-bold w-full py-[18px]">Register Now</button>
+              <button className="button py-[18px] w-44 lg:hidden">Submit</button>
             </div>
           </form>
         </div>
