@@ -8,7 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 function Footer() {
   return (
     <div className="bg-[#100B20] text-left grid font-montserrat py-12 text-xs">
-      <div className="w-[370px] place-self-center grid grid-cols-1 gap-8 md:grid-cols-3 md:w-auto md:px-16 px-12">
+      <div className="w-[370px] place-self-center flex flex-col gap-8 md:flex-row md:w-full md:px-10 px-12 lg:p-16">
         <div className="w-full">
           <h3 className="text-xl font-clashDisplay font-semibold">
             get<span className="text-customPurple">linked</span>
@@ -27,7 +27,7 @@ function Footer() {
             <p>Privacy Policy</p>
           </div>
         </div>
-        <div>
+        <div className=" w-full grid grid-cols-1 lg:ml-16">
           <h6 className="text-customPurple text-sm font-semibold">Useful Links</h6>
           <ul className="list-none leading-8">
             <li>Overview</li>
@@ -43,7 +43,7 @@ function Footer() {
             <FaLinkedinIn className="text-xl"/>
           </div>
         </div>
-        <div>
+        <div className="w-full lg:ml-16">
             <h6 className="text-customPurple text-sm font-semibold">Contact Us</h6>
             <div className="flex gap-4 mt-2">
               <FaPhoneVolume />

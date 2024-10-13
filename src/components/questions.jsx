@@ -45,24 +45,27 @@ function Questions() {
           want to ask about <strong>getlinked Hackathon 1.0</strong>
         </p>
       </div>
-      <div className="mt-4">
-        <div>
-          {accordionData.map((item, index) => (
-            <AccordionItem
-              key={index}
-              question={item.question}
-              answer={item.answer}
-            />
-          ))}
+      <div  className="mt-4 grid grid-cols-1 lg:grid-cols-2 place-items-center">
+
+        <div className="">
+          <div>
+            {accordionData.map((item, index) => (
+              <AccordionItem
+                key={index}
+                question={item.question}
+                answer={item.answer}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col justify-center items-center mt-16">
-        <div>
-          <span className="q-mark z-0 text-[40px] text-[#A866FD] right-24 top-12  md">?</span>
-          <span className="q-mark text-6xl text-customPurple  right-10 top-8 z-20 ">?</span>
-          <span className="q-mark text-[40px] text-[#A866FD] left-2 top-12 z-20">?</span>
+        <div className="flex flex-col justify-center items-center mt-16 lg:mt-0 lg:w-full lg:h-full">
+          <div>
+            <span className="q-mark z-0 text-[40px] text-[#A866FD] right-24 top-12  md">?</span>
+            <span className="q-mark text-6xl text-customPurple  right-10 top-8 z-20 ">?</span>
+            <span className="q-mark text-[40px] text-[#A866FD] left-2 top-12 z-20">?</span>
+          </div>
+          <img className="z-10 md:w-[60%]" src={thinking} alt="think" />
         </div>
-        <img className="z-10 md:w-[60%]" src={thinking} alt="think" />
       </div>
     </div>
   );

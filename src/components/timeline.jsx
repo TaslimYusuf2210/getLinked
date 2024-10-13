@@ -56,9 +56,9 @@ function Timeline() {
               getlinked tech hackathon 1.0 2023 by proceeding to register
             </p>
           </div>
-          <div className="w-auto text-right">
+          <div className="w-auto text-left">
             <h6 className="font-bold text-xl text-customPurple">
-              Teams Registration ends{" "}
+              Teams Registration ends
             </h6>
             <p className="text-xs leading-5">
               Interested Participants are no longer Allowed to <br />
@@ -141,7 +141,7 @@ function Timeline() {
           <div className="text-right place-self-end">
             <h6 className="font-bold text-xl text-customPurple">Demo Day </h6>
             <p className="text-xs leading-5">
-              Teams get the opportunity to pitch their projects to judges.{" "}
+              Teams get the opportunity to pitch their projects to judges.
               <br />
               The winner of the hackathon will also be announced on <br />
               this day
@@ -191,7 +191,7 @@ function Timeline() {
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
             <div className="flex gap-2">
-              <div className="flex flex-col  border-customPurple border-l-2 border-y-0 border-r-0 pl-4">
+              <div className="flex flex-col border-customPurple border-l-2 border-y-0 border-r-0 pl-4">
                 <h6 className="font-bold text-customPurple">
                   Teams Registration ends
                 </h6>

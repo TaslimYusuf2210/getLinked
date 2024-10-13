@@ -37,11 +37,12 @@ function Registration() {
   };
 
   return (
-    <div className="font-montserrat py-6 px-16 md:text-left lg:grid lg:grid-cols-2">
-      <div className="hidden lg:block w-4/5">
-      <img className="w-full" src={designer} alt="designer" />
+    <div className="font-montserrat py-6 px-14 md:text-left lg:grid lg:grid-cols-2 lg:place-items-center lg:px-20 lg:py-28 ">
+      <div className="hidden w-full lg:grid place-items-start mr-40">
+      <img className="w-full " src={designer} alt="designer" />
       </div>
-      <div>
+      <div className=" lg:bg-white/10 lg:backdrop-blur-lg lg:shadow-2xl lg:rounded-lg lg:w-full">
+      <div className="lg:mx-6">
         <div className="text-left">
           <h6 className="text-customPurple font-clashDisplay font-bold md:font-semibold md:text-[32px]">
             Register
@@ -163,6 +164,7 @@ function Registration() {
             </div>
           </form>
         </div>
+      </div>
       </div>
     </div>
   );
