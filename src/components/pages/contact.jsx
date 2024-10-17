@@ -110,10 +110,10 @@ function Contact() {
       <div className="">
 
       </div>
-        <img className="absolute opacity-70 left-[175px] top-[20.5%] hidden md:block" src={leftFlare} alt="flare" />
+        <img className="absolute opacity-70 bottom-0 right-0 hidden md:block" src={leftFlare} alt="flare" />
       <div className="hidden md:grid md:grid-cols-2 md:h-screen md:px-10 py-32 lg:px-20">
         <div className="grid grid-cols-1">
-          <img className="absolute opacity-70 right-[25%] bottom-[10%]" src={rightFlare} alt="flare" />
+          <img className="absolute opacity-70 left-0 top-0" src={rightFlare} alt="flare" />
           <div className="text-sm grid grid-cols-1 gap-4 h-3/6 mt-10">
             <h3 className="text-customPurple font-clashDisplay text-[28px] font-semibold">Get in touch</h3>
             <p>Contact <br /> Information</p>

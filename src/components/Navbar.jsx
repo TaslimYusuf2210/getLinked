@@ -8,17 +8,17 @@ function Navbar() {
   }
 
   return ( 
-    <div className="w-full">
+    <div className="w-full xl:max-w-[1812px] xl:mx-auto">
       <nav className="w-full px-14 py-6 list-none flex items-center justify-between text-sm lg:px-20">
-        <li className="text-xl font-bold text-white">get<span className="text-customPurple">linked</span></li>
-        <div className="lg:flex justify-center items-center gap-4 hidden">
-          <span className="flex gap-2 font-medium">
-            <li className="hover:text-base"><a href="">Timeline</a></li>
-            <li className="hover:text-base"><a href="">Overview</a></li>
-            <li className="hover:text-base"><a href=""> FAQs</a></li>
+        <li className="text-xl font-bold text-white lg:text-3xl xl:text-4xl">get<span className="text-customPurple">linked</span></li>
+        <div className="lg:flex justify-center items-center gap-16 xl:gap-32 hidden">
+          <span className="flex gap-7 font-medium lg:text-base xl:gap-20 ">
+            <li className="hover:text-base xl:hover:text-lg"><a href="">Timeline</a></li>
+            <li className="hover:text-base xl:hover:text-lg"><a href="">Overview</a></li>
+            <li className="hover:text-base xl:hover:text-lg"><a href=""> FAQs</a></li>
             <li className="hover:text-base hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-customPurple-light hover:to-customPurple-dark"><a href=""> Contact</a></li>
           </span>
-          <button className="button w-36 py-[14px] gradient-button">
+          <button className="button w-36 py-[14px] gradient-button xl:w-44 lg:text-base lg:font-bold">
             Register
           </button>
         </div>
