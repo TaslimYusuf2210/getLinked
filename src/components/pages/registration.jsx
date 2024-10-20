@@ -42,23 +42,23 @@ function Registration() {
       <img className="w-full " src={designer} alt="designer" />
       </div>
       <div className=" lg:bg-white/10 lg:backdrop-blur-lg lg:shadow-2xl lg:rounded-lg lg:w-full">
-      <div className="lg:mx-6">
+      <div className="lg:mx-6 lg:my-8">
         <div className="text-left">
-          <h6 className="text-customPurple font-clashDisplay font-bold md:font-semibold md:text-[32px]">
+          <h6 className="text-customPurple font-clashDisplay font-bold md:font-semibold md:text-[32px] lg:text-4xl">
             Register
           </h6>
         </div>
         <div className="grid place-items-center lg:place-items-start py-3 ">
           <img className="md:w-4/5 lg:hidden" src={designer} alt="designer" />
-          <img className="w-2/4" src={movement} alt="movement" />
+          <img className="w-2/4 lg:w-3/5 xl:3/4" src={movement} alt="movement" />
         </div>
         <div className="w-full">
-          <h2 className="text-xl w-full tracking-[0.015em]">
+          <h2 className="text-xl w-full tracking-[0.015em] lg:text-2xl">
             CREATE YOUR ACCOUNT
           </h2>
           <form onSubmit={handleSubmit(onSubmit)} action="">
             <div className="w-full grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
-              <div className="w-full text-[13px]">
+              <div className="w-full text-[13px] lg:text-[15px]">
                 <label htmlFor="">Team's Name</label>
                 <input
                   className="input-border text-[14px] px-6"
@@ -68,7 +68,7 @@ function Registration() {
                 />
                 <p className="text-xs text-red-500">{errors.teamsName?.message}</p>
               </div>
-              <div className="w-full text-[13px]">
+              <div className="w-full text-[13px] lg:text-[15px]">
                 <label htmlFor="">Phone</label>
                 <input
                   className="input-border text-[14px] px-6"
@@ -78,7 +78,7 @@ function Registration() {
                 />
                 <p className="text-xs text-red-500">{errors.phoneNumber?.message}</p>
               </div>
-              <div className="w-full text-[13px]">
+              <div className="w-full text-[13px] lg:text-[15px]">
                 <label htmlFor="">Email Address</label>
                 <input
                   className="input-border text-[14px] px-6"
@@ -88,7 +88,7 @@ function Registration() {
                 />
                 <p className="text-xs text-red-500">{errors.emailAddress?.message}</p> 
               </div>
-              <div className="w-full text-[13px]">
+              <div className="w-full text-[13px] lg:text-[15px]">
                 <label htmlFor="">Project Topic</label>
                 <input
                   className="input-border text-[14px] px-6"
@@ -100,7 +100,7 @@ function Registration() {
               </div>
             </div>
             <div className="w-full grid grid-cols-2 gap-2 mt-4">
-              <div className=" text-[13px] grid grid-col-1 w-full">
+              <div className=" text-[13px] lg:text-[15px] grid grid-col-1 w-full">
                 <label htmlFor="">Category</label>
                 <select
                   className=" input-border  text-white"
@@ -118,7 +118,7 @@ function Registration() {
                 <p className="text-xs text-red-500">{errors.category?.message}</p> 
 
               </div>
-              <div className="w-full text-[13px] grid grid-col-1">
+              <div className="w-full text-[13px] lg:text-[15px] grid grid-col-1">
                 <label htmlFor="">Group Size</label>
                 <select
                   className="input-border"
@@ -141,7 +141,7 @@ function Registration() {
               </div>
             </div>
             <div className="mt-3">
-              <p className="text-customPurple-light text-[9px]">
+              <p className="text-customPurple-light text-[9px] lg:text-[11px]">
                 <i>Please review your registration details before submitting</i>
               </p>
               <div className="flex-col gap-2 mt-3">
@@ -151,7 +151,7 @@ function Registration() {
                   type="checkbox"
                   {...register("agree")}
                   />
-                  <p className="text-[10px] w-full tracking-[0.025em]">
+                  <p className="text-[10px] lg:text-xs w-full tracking-[0.025em]">
                     I agreed with the event terms and conditions and privacy policy
                   </p>
                 </div>

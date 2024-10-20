@@ -115,14 +115,14 @@ function Contact() {
         <div className="grid grid-cols-1">
           <img className="absolute opacity-70 left-0 top-0" src={rightFlare} alt="flare" />
           <div className="text-sm grid grid-cols-1 gap-4 h-3/6 mt-10">
-            <h3 className="text-customPurple font-clashDisplay text-[28px] font-semibold">Get in touch</h3>
-            <p>Contact <br /> Information</p>
-            <p>27,Alara Street <br /> Yaba 100012 <br /> Lagos State</p>
-            <p>Call Us : 07067981819</p>
-            <p>We are open from Monday-Friday <br /> 08:00am - 05:00pm</p>
+            <h3 className="text-customPurple font-clashDisplay text-[28px] font-semibold lg:text-4xl xl:text-5xl">Get in touch</h3>
+            <p className="lg:text-base xl:text-lg">Contact <br /> Information</p>
+            <p className="lg:text-base xl:text-lg">27,Alara Street <br /> Yaba 100012 <br /> Lagos State</p>
+            <p className="lg:text-base xl:text-lg">Call Us : 07067981819</p>
+            <p className="lg:text-base xl:text-lg">We are open from Monday-Friday <br /> 08:00am - 05:00pm</p>
             <div className="text-left flex flex-col gap-2">
-              <p className="text-customPurple">Share on</p>
-              <div className="flex gap-2 text-sm">
+              <p className="text-customPurple lg:text-base xl:text-lg">Share on</p>
+              <div className="flex gap-2 text-sm lg:text-base xl:text-xl">
                 <FaInstagram />
                 <FaXTwitter />
                 <FaFacebookF />
@@ -134,14 +134,14 @@ function Contact() {
         <div className="w-full">
           <form action="">
             <div className="grid grid-cols-1 gap-6 p-4 bg-white/10 backdrop-blur-lg shadow-2xl rounded-lg">
-              <header className="text-customPurple font-clashDisplay font-semibold text-xl">
+              <header className="text-customPurple font-clashDisplay font-semibold text-xl lg:text-2xl xl:text-3xl">
                 Questions or need assistance? <br /> Let us know about it!
               </header>
               <input className="input-border px-8 bg-transparent" type="text" placeholder="First Name" />
               <input className="input-border px-8 bg-transparent" type="email" placeholder="Mail" />
               <textarea className="input-border px-8 py-4 h-36 bg-transparent" placeholder="Message"></textarea>
               <div className="text-center">
-                <button className="button w-[172px] h-[53px]">Submit</button>
+                <button className="button w-[172px] h-[53px] lg:font-semibold lg:w-48 xl:w-52 xl:text-xl">Submit</button>
               </div>
             </div>
           </form>
