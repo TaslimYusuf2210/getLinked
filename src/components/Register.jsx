@@ -5,10 +5,16 @@ import bulb from "../assets/bulb.svg";
 import purpleLensFlare from "../assets/PurpleLensFlare.svg";
 import man from "../assets/man.svg";
 import crystalball from "../assets/crystalball.svg";
+import star from "../assets/star.svg"
+import whiteStar from "../assets/white star.svg"
 
 function Register() {
   return (
     <div>
+      <img className="absolute md:left-[55%] md:top-[30%] top-[20%] left-[80%]  w-2 md:w-5 lg:w-6 xl:w-8" src={star} alt="star" />
+      <img className="absolute z-20 md:left-[35%] md:top-[60%] lg:top-[70%] top-[40%] left-[65%]  w-[10px] md:w-5 lg:w-6 xl:w-8" src={star} alt="star" />
+      <img className="absolute z-10 md:left-[10%] md:top-[15%] top-[20%] left-[30%] md:w-5 lg:w-6 xl:w-8 w-3" src={whiteStar} alt="star" />
+      <img className="absolute z-0 left-0 top-0 xl:w-[1086px] lg:w-[800px]" src={purpleLensFlare} alt="flare" />
       <div className="md:px-16 md:flex md:justify-between md:w-full  hidden">
         <div></div>
         <div>

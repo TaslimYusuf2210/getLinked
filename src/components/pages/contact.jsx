@@ -18,6 +18,15 @@ const schema = yup.object().shape({
   message: yup.string().required("This field is required"),
 });
 
+const secondSchema = yup.object().shape({
+  firstName: yup.string().required("Please enter your first name"),
+  mail: yup
+    .string()
+    .email("Invalid email address")
+    .required("Email address is required"),
+  message: yup.string().required("This field is required"),
+});
+
 function Contact() {
   const {
     register,
@@ -26,11 +35,26 @@ function Contact() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  
+  const {
+    register: secondRegister,
+    handleSubmit: secondHandleSubmit,
+    formState: { errors:secondErrors },
+  } = useForm({
+    resolver: yupResolver(secondSchema),
+  });
+
+
 
   const onSubmit = (data) => {
     console.log(data);
     console.log("form submitted"); // Handle form data
   };
+
+  const onSecondSubmit = () => {
+    console.log(data);
+    console.log("second form submitted")
+  }
 
   return (
     <div className="font-montserrat ">
@@ -132,14 +156,39 @@ function Contact() {
           </div>
         </div>
         <div className="w-full">
-          <form action="">
+          <form action="" onSubmit={secondHandleSubmit(onSecondSubmit)}>
             <div className="grid grid-cols-1 gap-6 p-4 bg-white/10 backdrop-blur-lg shadow-2xl rounded-lg">
               <header className="text-customPurple font-clashDisplay font-semibold text-xl lg:text-2xl xl:text-3xl">
                 Questions or need assistance? <br /> Let us know about it!
               </header>
-              <input className="input-border px-8 bg-transparent" type="text" placeholder="First Name" />
-              <input className="input-border px-8 bg-transparent" type="email" placeholder="Mail" />
-              <textarea className="input-border px-8 py-4 h-36 bg-transparent" placeholder="Message"></textarea>
+              <div>
+                <input 
+                className="input-border px-8 bg-transparent" 
+                type="text" 
+                placeholder="First Name" 
+                {...secondRegister("firstName")}
+                />
+                <p className="text-xs text-red-500">{secondErrors.firstName?.message}</p>
+              </div>
+
+              <div>
+                <input 
+                className="input-border px-8 bg-transparent" 
+                type="email" 
+                placeholder="Mail" 
+                {...secondRegister("mail")}
+                />
+                <p className="text-xs text-red-500">{secondErrors.mail?.message}</p>
+              </div>
+
+              <div>
+                <textarea 
+                className="input-border px-8 py-4 h-36 bg-transparent" 
+                placeholder="Message"
+                {...secondRegister("message")}
+                ></textarea>
+                <p className="text-xs relative bottom-2 text-red-500">{secondErrors.message?.message}</p>
+              </div>
               <div className="text-center">
                 <button className="button w-[172px] h-[53px] lg:font-semibold lg:w-48 xl:w-52 xl:text-xl">Submit</button>
               </div>

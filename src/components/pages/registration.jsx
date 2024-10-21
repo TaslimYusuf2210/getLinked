@@ -3,6 +3,8 @@ import designer from "../../assets/designer.svg";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import leftFlare from "../../assets/contactFlare2.svg"
+import rightFlare from "../../assets/contactFlare1.svg"
 
 const schema = yup.object().shape({
   teamsName: yup.string().required("Name is required"),
@@ -38,8 +40,10 @@ function Registration() {
 
   return (
     <div className="font-montserrat py-6 px-14 md:text-left lg:grid lg:grid-cols-2 lg:place-items-center lg:px-20 lg:py-28 ">
+      <img className="hidden lg:block absolute z-0 bottom-0 right-0" src={leftFlare} alt="flare" />
+      <img className=" hidden lg:block absolute z-0 top-0 left-0" src={rightFlare} alt="flare" />
       <div className="hidden w-full lg:grid place-items-start mr-40">
-      <img className="w-full " src={designer} alt="designer" />
+      <img className="w-full z-10 " src={designer} alt="designer" />
       </div>
       <div className=" lg:bg-white/10 lg:backdrop-blur-lg lg:shadow-2xl lg:rounded-lg lg:w-full">
       <div className="lg:mx-6 lg:my-8">
@@ -49,10 +53,10 @@ function Registration() {
           </h6>
         </div>
         <div className="grid place-items-center lg:place-items-start py-3 ">
-          <img className="md:w-4/5 lg:hidden" src={designer} alt="designer" />
+          <img className="md:w-4/5 lg:hidden z-10" src={designer} alt="designer" />
           <img className="w-2/4 lg:w-3/5 xl:3/4" src={movement} alt="movement" />
         </div>
-        <div className="w-full">
+        <div className="w-full z-10">
           <h2 className="text-xl w-full tracking-[0.015em] lg:text-2xl">
             CREATE YOUR ACCOUNT
           </h2>
