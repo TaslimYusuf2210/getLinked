@@ -1,13 +1,28 @@
 import bigIdea from "../assets/The big idea.svg"
 import rulesImage from "../assets/rulespicture.svg"
 import judgeImage from "../assets/judgeimage.svg"
+import star from "../assets/star.svg"
+import starPurpleLight from "../assets/sata gra.svg"
+import starCustomPurple from "../assets/star pu.svg"
+import arrow from "../assets/arrow.svg"
 
 function Info() {
   return ( 
     <div className="text-center mt-8 xl:px-14">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:pr-[10%] xl:pr-0">
+      {/* aesthetics here */}
+      <img className="relative z-10 lg:top-60 lg:left-32 md:top-52 md:left-24" src={starPurpleLight} alt="star" />
+      <img className="relative z-10 lg:left-[90%] lg:top-40 md:left-[85%] md:top-16" src={starCustomPurple} alt="star" />
+      <img className="absolute z-10 h-16" src={starCustomPurple} alt="star" />
+      <img className="absolute z-10" src={star} alt="star" />
+      <img className="absolute z-10" src={star} alt="star" />
+      <img className="absolute z-10" src={star} alt="star" />
+      <img className="absolute z-10" src={star} alt="star" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:pr-[10%] xl:pr-0 xl:gap-10">
         <div className="grid">
-          <img className="place-self-center xl:w-[490px] xl:h-[477px]" src={bigIdea} alt="big idea" />
+          <div className="place-self-center flex justify-end items-end xl:w-full xl:h-full">
+            <img className="place-self-center  xl:w-[490px] xl:h-[477px]" src={bigIdea} alt="big idea" />
+            <img className="lg:w-12 lg:h-14 md:w-9 md:h-10" src={arrow} alt="arrow"/>
+          </div>
         </div>
         <div className="m-8 place-self-center w-[300px] md:text-left md:w-auto">
           <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] lg:leading-normal">Introduction to getlinked <br />
@@ -25,7 +40,7 @@ function Info() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:pl-[10%]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:pl-[5%]">
         <div className="grid md:order-2">
           <img  src={rulesImage} alt="image" className="place-self-center xl:w-[664px] xl:h-[664px]" />
         </div>

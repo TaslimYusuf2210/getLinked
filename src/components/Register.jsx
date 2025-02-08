@@ -34,7 +34,7 @@ function Register() {
           src={purpleLensFlare}
           alt="gradient"
         />
-        <div className="flex flex-col justify-center items-center md:w-3/5 md:items-start">
+        <div className="flex flex-col justify-center items-center md:w-3/5 md:items-start z-10">
           {/* <div className="md:hidden flex flex-col w-[325px] mx-9 ">
             <p className="font-base italic text-white font-bold font-montserrat">
               Igniting a Revolution in HR Innovation

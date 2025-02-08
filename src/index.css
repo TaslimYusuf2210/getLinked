@@ -15,6 +15,9 @@
   .input-border {
     @apply bg-customPurple-darker border h-12 w-full border-white rounded-[4px] text-base ;
   }
+  .navstyle {
+    @apply hover:text-base xl:hover:text-lg font-montserrat
+  }
   /* 2px solid;
   : linear-gradient(180deg, #9A39FF 0%, #FF29B9 100%); */
   .gradient-button:hover {
