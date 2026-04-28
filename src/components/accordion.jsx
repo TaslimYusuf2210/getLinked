@@ -8,12 +8,14 @@ const AccordionItem = ({ question, answer }) => {
   };
 
   return (
-    <div className="px-12 py-4 w-full ">
-      <div className="flex space-between justify-center items-end min-w-72 border-b-customPurple border-x-0 border-t-0 border-[2px] pb-2" onClick={toggleAccordion}>
+    <div className="px-12 py-4 w-full">
+      <div className="flex space-between justify-center items-end min-w-72 border-b-customPurple border-x-0 border-t-0 border-[2px] pb-2 cursor-pointer" onClick={toggleAccordion}>
         <h3 className="font-medium text-xs w-full md:text-base">{question}</h3>
-        <span className="text-lg font-bold relative top-1 text-customPurple md:text-xl">{isOpen ? '-' : '+'}</span>
+        <span className="text-lg font-bold relative top-1 text-customPurple md:text-xl transition-transform duration-300">{isOpen ? '-' : '+'}</span>
       </div>
-      {isOpen && <div>{answer}</div>}
+      <div className={`accordion-content overflow-hidden transition-all duration-600 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
+        <div className="pt-4 text-xs md:text-base text-left">{answer}</div>
+      </div>
     </div>
   );
 };

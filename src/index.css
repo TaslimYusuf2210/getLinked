@@ -4,7 +4,13 @@
 
 @layer components {
   .button {
-    @apply bg-gradient-to-r from-customPurple-light to-customPurple-dark rounded font-medium;
+    @apply bg-gradient-to-r from-customPurple-light to-customPurple-dark rounded font-medium transition-all duration-300 ease-in;
+  }
+  .button:hover {
+    @apply shadow-lg shadow-customPurple/50;
+  }
+  .button:focus {
+    @apply outline-none ring-2 ring-customPurple ring-offset-2 ring-offset-slate-900;
   }
   .q-mark {
     @apply font-madeTommyOutline font-medium relative;
@@ -13,11 +19,17 @@
     @apply text-[13px]
   }
   .input-border {
-    @apply bg-customPurple-darker border h-12 w-full border-white rounded-[4px] text-base ;
+    @apply bg-customPurple-darker border h-12 w-full border-white rounded-[4px] text-base transition-all duration-300;
+  }
+  .input-border:focus {
+    @apply outline-none border-customPurple bg-slate-900/30 shadow-lg shadow-customPurple/20;
   }
   .navstyle {
-    @apply hover:text-base xl:hover:text-lg font-montserrat
+    @apply hover:text-base xl:hover:text-lg font-montserrat transition-all duration-300 hover:text-transparent border-none hover:bg-clip-text hover:bg-gradient-to-r hover:from-customPurple-light hover:to-customPurple-dark cursor-pointer
   }
+  /* .navstyle:focus {
+    @apply outline-none ring-2 ring-customPurple ring-offset-2 ring-offset-slate-900  border-none;
+  } */
   /* 2px solid;
   : linear-gradient(180deg, #9A39FF 0%, #FF29B9 100%); */
   .gradient-button:hover {
@@ -30,4 +42,34 @@
   background-origin: padding-box, border-box;
   }
 
+  /* Accordion smooth transition */
+  .accordion-content {
+    @apply overflow-hidden;
+  }
+
+  /* Hero section ID for smooth scroll */
+  #hero {
+    scroll-margin-top: 80px;
+  }
+  #overview {
+    scroll-margin-top: 80px;
+  }
+  #faq {
+    scroll-margin-top: 80px;
+  }
+  #timeline {
+    scroll-margin-top: 80px;
+  }
+  #contact {
+    scroll-margin-top: 80px;
+  }
+
+  /* Accessibility: Reduce motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.02ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.02ms !important;
+    }
+  }
 }

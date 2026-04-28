@@ -1,5 +1,4 @@
-import Navbar from "./components/Navbar"
-import React from 'react';
+import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from "./components/pages/home";
 import Contact from "./components/pages/contact";
@@ -8,10 +7,10 @@ import Registration from "./components/pages/registration";
 function App() {
 
   return (
-    <>
-    <div className="bg-customPurple-darker text-white min-h-screen">
+    <div className="bg-customPurple-darker">
+    <div className="max-w-[1360px] mx-auto text-white min-h-screen">
       <Navbar />
-        <div className=" max-w-[1812px] mx-auto">
+        <div className=" ">
           <Router>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -22,7 +21,7 @@ function App() {
           
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

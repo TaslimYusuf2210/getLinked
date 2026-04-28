@@ -7,13 +7,43 @@ import man from "../assets/man.svg";
 import crystalball from "../assets/crystalball.svg";
 import star from "../assets/star.svg"
 import whiteStar from "../assets/white star.svg"
+import { useState, useEffect } from "react";
 
 function Register() {
+  const [timeLeft, setTimeLeft] = useState({
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    // Set a target date (example: 24 hours from now)
+    const calculateTimeLeft = () => {
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 1); // 24 hours from now
+      
+      const difference = targetDate - new Date();
+      
+      if (difference > 0) {
+        setTimeLeft({
+          hours: String(Math.floor(difference / (1000 * 60 * 60))).padStart(2, '0'),
+          minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0'),
+          seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, '0'),
+        });
+      } else {
+        setTimeLeft({ hours: '00', minutes: '00', seconds: '00' });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, []);
   return (
-    <div>
-      <img className="absolute md:left-[55%] md:top-[30%] top-[20%] left-[80%]  w-2 md:w-5 lg:w-6 xl:w-8" src={star} alt="star" />
-      <img className="absolute z-20 md:left-[35%] md:top-[60%] lg:top-[70%] top-[40%] left-[65%]  w-[10px] md:w-5 lg:w-6 xl:w-8" src={star} alt="star" />
-      <img className="absolute z-10 md:left-[10%] md:top-[15%] top-[20%] left-[30%] md:w-5 lg:w-6 xl:w-8 w-3" src={whiteStar} alt="star" />
+    <div id="hero">
+      <img className="absolute md:left-[55%] md:top-[30%] top-[15%] left-[75%] sm:left-[78%] w-1 sm:w-2 md:w-5 lg:w-6 xl:w-8 hidden sm:block" src={star} alt="star" />
+      <img className="absolute z-20 md:left-[35%] md:top-[60%] lg:top-[70%] top-[35%] left-[60%] sm:left-[65%] w-[8px] sm:w-[10px] md:w-5 lg:w-6 xl:w-8 hidden sm:block" src={star} alt="star" />
+      <img className="absolute z-10 md:left-[10%] md:top-[15%] top-[18%] left-[28%] sm:left-[30%] md:w-5 lg:w-6 xl:w-8 w-2 sm:w-3 hidden sm:block" src={whiteStar} alt="star" />
       <img className="absolute z-0 left-0 top-0 xl:w-[1086px] lg:w-[800px]" src={purpleLensFlare} alt="flare" />
       <div className="md:px-16 md:flex md:justify-between md:w-full  hidden">
         <div></div>
@@ -60,8 +90,8 @@ function Register() {
           </p>
           <button className="button w-40 mt-10 py-4 lg:font-base xl:font-bold">Register</button>
           <div className="font-unica text-5xl mt-10">
-            00<span className="font-montserrat text-sm">H</span> 00
-            <span className="font-montserrat text-sm">M</span> 00
+            {timeLeft.hours}<span className="font-montserrat text-sm">H</span> {timeLeft.minutes}
+            <span className="font-montserrat text-sm">M</span> {timeLeft.seconds}
             <span className="font-montserrat text-sm">S</span>
           </div>
         </div>

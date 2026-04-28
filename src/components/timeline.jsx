@@ -2,7 +2,7 @@ import Timelineprops from "./timelineprops";
 
 function Timeline() {
   return (
-    <div className="flex flex-col justify-center items-center font-montserrat my-6 text-[12px] px-10 md:text-base ">
+    <div id="timeline" className="flex flex-col justify-center items-center font-montserrat my-6 text-[12px] px-10 md:text-base ">
       <div className="text-center ">
         <h4 className="font-clashDisplay text-xl font-bold lg:text-[32px]">Timeline</h4>
         <p className="text-sm md:text-base mt-4">
@@ -47,7 +47,7 @@ function Timeline() {
               </div>
             </div>
           </div>
-          <div className="w-auto text-left place-self-start pt-8">
+          <div className="w-auto text-left place-self-start">
             <h6 className="font-bold text-2xl text-customPurple">
               Teams Registration begins
             </h6>

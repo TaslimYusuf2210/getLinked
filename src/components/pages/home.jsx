@@ -12,8 +12,12 @@ function Home() {
     <div>
       <Register />
         <Info/>
+        <div id="faq">
         <Questions/>
+        </div>
+        <div id="timeline">
         <Timeline/>
+        </div>
         <PricesAndReward/>
         <PartnersAndSponsors/>
         <PrivacyPolicy/>

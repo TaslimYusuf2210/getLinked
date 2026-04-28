@@ -8,15 +8,15 @@ import arrow from "../assets/arrow.svg"
 
 function Info() {
   return ( 
-    <div className="text-center mt-8 xl:px-14">
+    <div  className="text-center mt-8 xl:px-14">
       {/* aesthetics here */}
-      <img className="relative z-10 lg:top-60 lg:left-32 md:top-52 md:left-24" src={starPurpleLight} alt="star" />
-      <img className="relative z-10 lg:left-[90%] lg:top-40 md:left-[85%] md:top-16" src={starCustomPurple} alt="star" />
-      <img className="absolute z-10 h-16" src={starCustomPurple} alt="star" />
-      <img className="absolute z-10" src={star} alt="star" />
-      <img className="absolute z-10" src={star} alt="star" />
-      <img className="absolute z-10" src={star} alt="star" />
-      <img className="absolute z-10" src={star} alt="star" />
+      <img className="relative z-10 lg:top-60 lg:left-32 md:top-52 md:left-24 hidden md:block" src={starPurpleLight} alt="star" />
+      <img className="relative z-10 lg:left-[90%] lg:top-40 md:left-[85%] md:top-16 hidden md:block" src={starCustomPurple} alt="star" />
+      <img className="absolute z-10 h-16 hidden lg:block" src={starCustomPurple} alt="star" />
+      <img className="absolute z-10 hidden md:block" src={star} alt="star" />
+      <img className="absolute z-10 hidden lg:block" src={star} alt="star" />
+      <img className="absolute z-10 hidden lg:block" src={star} alt="star" />
+      <img className="absolute z-10 hidden lg:block" src={star} alt="star" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:pr-[10%] xl:pr-0 xl:gap-10">
         <div className="grid">
           <div className="place-self-center flex justify-end items-end xl:w-full xl:h-full">

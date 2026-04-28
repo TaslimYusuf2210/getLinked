@@ -37,7 +37,7 @@ function Questions() {
     <div className="flex flex-col justify-center font-montserrat text-[12px] md:text-base">
       <div className="text-center lg:hidden">
         <h4 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-loose">
-          Frequently Ask <br />{" "}
+          Frequently Asked <br />
           <span className="text-customPurple">Question</span>
         </h4>
         <p className="mt-2">
@@ -70,7 +70,7 @@ function Questions() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center mt-16 lg:mt-0 lg:w-full lg:h-full">
-          <div>
+          <div className="hidden md:block relative w-full h-64 lg:h-auto">
             <span className="q-mark z-0 text-[40px] text-[#A866FD] right-24 top-12 xl:text-7xl xl:top-16 xl:right-28">?</span>
             <span className="q-mark text-6xl text-customPurple  right-10 top-8 z-20 xl:text-9xl">?</span>
             <span className="q-mark text-[40px] text-[#A866FD] left-2 top-12 z-20 md:bottom-1 xl:text-7xl xl:top-16 xl:left-6">?</span>

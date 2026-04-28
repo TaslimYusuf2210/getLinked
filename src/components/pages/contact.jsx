@@ -57,7 +57,7 @@ function Contact() {
   }
 
   return (
-    <div className="font-montserrat ">
+    <div id="contact" className="font-montserrat ">
       <div className="grid gap-10 place-items-center text-left px-16 md:hidden">
         <div className="w-full ">
           <p className="text-xl leading-6 text-customPurple font-clashDisplay mt-10">
