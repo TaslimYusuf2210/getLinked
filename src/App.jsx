@@ -8,18 +8,15 @@ function App() {
 
   return (
     <div className="bg-customPurple-darker">
-    <div className="max-w-[1360px] mx-auto text-white min-h-screen">
-      <Navbar />
-        <div className=" ">
+    <div className="max-w-[1380px] mx-auto text-white min-h-screen">
           <Router>
+            <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/register" element={<Registration />} />
             </Routes>
           </Router>
-          
-        </div>
       </div>
     </div>
   )

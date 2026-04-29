@@ -8,7 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 function Footer() {
   return (
     <div className="bg-[#100B20] text-left grid font-montserrat py-12 text-xs lg:text-base">
-      <div className="w-[370px] place-self-center flex flex-col gap-8 md:flex-row md:w-full md:px-10 px-12 lg:p-16">
+      <div className="w-full max-w-[90%] md:max-w-none place-self-center flex flex-col gap-8 md:flex-row md:px-10 px-4 lg:p-16">
         <div className="w-full">
           <h3 className="text-xl font-clashDisplay font-semibold lg:text-3xl">
             get<span className="text-customPurple">linked</span>

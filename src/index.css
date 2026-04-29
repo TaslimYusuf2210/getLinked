@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @layer components {
   .button {
     @apply bg-gradient-to-r from-customPurple-light to-customPurple-dark rounded font-medium transition-all duration-300 ease-in;
   }
   .button:hover {
-    @apply shadow-lg shadow-customPurple/50;
+    @apply shadow-lg shadow-customPurple/50 -translate-y-0.5;
   }
   .button:focus {
     @apply outline-none ring-2 ring-customPurple ring-offset-2 ring-offset-slate-900;

@@ -1,115 +1,165 @@
-import bigIdea from "../assets/The big idea.svg"
-import rulesImage from "../assets/rulespicture.svg"
-import judgeImage from "../assets/judgeimage.svg"
-import star from "../assets/star.svg"
-import starPurpleLight from "../assets/sata gra.svg"
-import starCustomPurple from "../assets/star pu.svg"
-import arrow from "../assets/arrow.svg"
+import bigIdea from "../assets/The big idea.svg";
+import rulesImage from "../assets/rulespicture.svg";
+import judgeImage from "../assets/judgeimage.svg";
+import arrow from "../assets/arrow.svg";
+import Star from "./Star";
+import Glow from "./Glow";
 
 function Info() {
-  return ( 
-    <div  className="text-center mt-8 xl:px-14">
+  return (
+    <div className="text-center mt-8 xl:px-14">
       {/* aesthetics here */}
-      <img className="relative z-10 lg:top-60 lg:left-32 md:top-52 md:left-24 hidden md:block" src={starPurpleLight} alt="star" />
-      <img className="relative z-10 lg:left-[90%] lg:top-40 md:left-[85%] md:top-16 hidden md:block" src={starCustomPurple} alt="star" />
-      <img className="absolute z-10 h-16 hidden lg:block" src={starCustomPurple} alt="star" />
-      <img className="absolute z-10 hidden md:block" src={star} alt="star" />
-      <img className="absolute z-10 hidden lg:block" src={star} alt="star" />
-      <img className="absolute z-10 hidden lg:block" src={star} alt="star" />
-      <img className="absolute z-10 hidden lg:block" src={star} alt="star" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:pr-[10%] xl:pr-0 xl:gap-10">
         <div className="grid">
           <div className="place-self-center flex justify-end items-end xl:w-full xl:h-full">
-            <img className="place-self-center  xl:w-[490px] xl:h-[477px]" src={bigIdea} alt="big idea" />
-            <img className="lg:w-12 lg:h-14 md:w-9 md:h-10" src={arrow} alt="arrow"/>
+            <img
+              className="place-self-center w-[80%] max-w-md xl:max-w-none xl:w-[490px] xl:h-[477px] hover:scale-105 transition-transform duration-500"
+              src={bigIdea}
+              alt="big idea"
+            />
+            <img
+              className="lg:w-12 lg:h-14 md:w-9 md:h-10"
+              src={arrow}
+              alt="arrow"
+            />
           </div>
         </div>
-        <div className="m-8 place-self-center w-[300px] md:text-left md:w-auto">
-          <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] lg:leading-normal">Introduction to getlinked <br />
-          <span className="text-customPurple"> tech Hackathon 1.0</span></h5>
+        <div className="m-8 place-self-center w-full max-w-[90%] md:max-w-lg md:text-left md:w-auto px-4 md:px-0">
+          <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] lg:leading-normal">
+            Introduction to getlinked <br />
+            <span className="text-customPurple"> tech Hackathon 1.0</span>
+          </h5>
           <p className="text-xsm font-montserrat leading-8 lg:leading-loose lg:text-base">
-          Our tech hackathon is a melting pot of 
-          visionaries, and its purpose is as clear as 
-          day: to shape the future. Whether you're 
-          a coding genius, a design maverick, or a 
-          concept wizard, you'll have the chance to 
-          transform your ideas into reality. Solving 
-          real-world problems, pushing the boundaries 
-          of technology, and creating solutions that can 
-          change the world, that's what we're all about!
+            Our tech hackathon is a melting pot of visionaries, and its purpose
+            is as clear as day: to shape the future. Whether you're a coding
+            genius, a design maverick, or a concept wizard, you'll have the
+            chance to transform your ideas into reality. Solving real-world
+            problems, pushing the boundaries of technology, and creating
+            solutions that can change the world, that's what we're all about!
           </p>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:pl-[5%]">
         <div className="grid md:order-2">
-          <img  src={rulesImage} alt="image" className="place-self-center xl:w-[664px] xl:h-[664px]" />
+          <img
+            src={rulesImage}
+            alt="image"
+            className="place-self-center w-[80%] max-w-md xl:max-w-none xl:w-[664px] xl:h-[664px] hover:scale-105 transition-transform duration-500"
+          />
         </div>
-        <div className="m-8 place-self-center w-[300px] md:order-1 md:text-left md:w-auto">
-          <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] lg:leading-normal">Rules and<br />
-          <span className="text-customPurple">Guidelines</span></h5>
+        <div className="m-8 place-self-center w-full max-w-[90%] md:max-w-lg md:order-1 md:text-left md:w-auto px-4 md:px-0">
+          <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] lg:leading-normal">
+            Rules and
+            <br />
+            <span className="text-customPurple">Guidelines</span>
+          </h5>
           <p className="text-xsm font-montserrat leading-8 lg:leading-loose lg:text-base">
-          Our tech hackathon is a melting pot of 
-          visionaries, and its purpose is as clear as day: 
-          to shape the future. Whether you're a coding 
-          genius, a design maverick, or a concept 
-          wizard, you'll have the chance to transform
-          your ideas into reality. Solving real-world 
-          problems, pushing the boundaries of 
-          technology, and creating solutions that can 
-          change the world, that's what we're all about!
+            Our tech hackathon is a melting pot of visionaries, and its purpose
+            is as clear as day: to shape the future. Whether you're a coding
+            genius, a design maverick, or a concept wizard, you'll have the
+            chance to transform your ideas into reality. Solving real-world
+            problems, pushing the boundaries of technology, and creating
+            solutions that can change the world, that's what we're all about!
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-2">
-        <div className="grid md:order-2 xl:order-1">
-          <img src={judgeImage} alt="image" className="place-self-center md:w-[60%] xl:w-full xl:mt-20" />
+      <div className="grid grid-cols-1 xl:grid-cols-2 mt-16 xl:mt-24 relative">
+        <div className="absolute top-[20%] left-[5%] md:left-[10%] -z-10">
+          <Glow size="lg" color="purple" />
         </div>
-        <div className="m-12 md:order-1 xl:text-left w-[300px] place-self-center md:w-[440px] lg:w-auto lg:px-[20%] xl:px-0 xl:order-2">
-          <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-normal">Judging Criteria<br />
-          <span className="text-customPurple">Key attributes</span></h5>
-          <div className="xl:text-left text-xsm font-montserrat leading-6 lg:text-base text-center">
-            <div className="mt-4">
-              <span className="text-customPurple-light text-sm font-semibold lg:text-lg">Innovation and Creativity:</span> Evaluate the 
-              uniqueness and creativity of the solution.
-              Consider whether it addresses a real-world
-              problem in a novel way or introduces innovative 
-              features.
+
+        <div className="grid md:order-2 xl:order-1 relative">
+          <Star
+            color="purple"
+            size="lg"
+            className="-top-10 left-[20%]"
+            twinkle={true}
+          />
+          <img
+            src={judgeImage}
+            alt="image"
+            className="place-self-center w-[80%] max-w-md md:w-[60%] xl:max-w-none xl:w-full xl:mt-20 hover:scale-105 transition-transform duration-500 relative z-10"
+          />
+          <Star
+            color="grey"
+            size="md"
+            className="bottom-[10%] right-[30%] xl:right-[15%]"
+            twinkle={true}
+          />
+        </div>
+        <div className="m-12 md:order-1 text-left w-full max-w-[90%] place-self-center md:max-w-lg lg:w-auto lg:px-[10%] xl:px-0 xl:order-2 px-4 md:px-0 relative">
+          <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-normal">
+            Judging Criteria
+            <br />
+            <span className="text-customPurple">Key attributes</span>
+          </h5>
+          <div className="text-left text-xsm font-montserrat leading-6 lg:text-[14px] xl:leading-[27.5px] mt-6">
+            <div className="mb-6">
+              <span className="text-customPurple-light text-sm font-bold lg:text-[16px]">
+                Innovation and Creativity:{" "}
+              </span>
+              <span className="text-white text-[13px] lg:text-[14px]">
+                Evaluate the uniqueness and creativity of the solution. Consider
+                whether it addresses a real-world problem in a novel way or
+                introduces innovative features.
+              </span>
             </div>
-            <div className="mt-4">
-              <span className="text-customPurple-light text-sm font-semibold lg:text-lg">Functionality:</span> Assess how well the solution 
-              works. Does it perform its intended functions 
-              effectively and without major issues? Judges
-              would consider the completeness and 
-              robustness of the solution.
+            <div className="mb-6">
+              <span className="text-customPurple-light text-sm font-bold lg:text-[16px]">
+                Functionality:{" "}
+              </span>
+              <span className="text-white text-[13px] lg:text-[14px]">
+                Assess how well the solution works. Does it perform its intended
+                functions effectively and without major issues? Judges would
+                consider the completeness and robustness of the solution.
+              </span>
             </div>
-            <div className="mt-4">
-              <span className="text-customPurple-light text-sm font-semibold lg:text-lg">Impact and Relevance:</span> Determine the
-              potential impact of the solution in the real world. 
-              Does it address a significant problem, and is it 
-              relevant to the target audience? Judges would 
-              assess the potential social, economic, or 
-              environmental benefits.
+            <div className="mb-6">
+              <span className="text-customPurple-light text-sm font-bold lg:text-[16px]">
+                Impact and Relevance:{" "}
+              </span>
+              <span className="text-white text-[13px] lg:text-[14px]">
+                Determine the potential impact of the solution in the real
+                world. Does it address a significant problem, and is it relevant
+                to the target audience? Judges would assess the potential
+                social, economic, or environmental benefits.
+              </span>
             </div>
-            <div className="mt-4">
-              <span className="text-customPurple-light text-sm font-semibold lg:text-lg">Technical Complexity:</span>  Evaluate the technical 
-              sophistication of the solution. Judges would 
-              consider the complexity of the code, the use of 
-              advanced technologies or algorithms, and the
-              scalability of the solution.
+            <div className="mb-6">
+              <span className="text-customPurple-light text-sm font-bold lg:text-[16px]">
+                Technical Complexity:{" "}
+              </span>
+              <span className="text-white text-[13px] lg:text-[14px]">
+                Evaluate the technical sophistication of the solution. Judges
+                would consider the complexity of the code, the use of advanced
+                technologies or algorithms, and the scalability of the solution.
+              </span>
             </div>
-            <div className="mt-4">
-              <span className="text-customPurple-light text-sm font-semibold lg:text-lg">Adherence to Hackathon Rules:</span> Judges will
-              Ensure that the team adhered to the rules and 
-              guidelines of the hackathon, including deadlines, 
-              use of specific technologies or APIs, and any
-              other competition-specific requirements.
+            <div className="mb-6">
+              <span className="text-customPurple-light text-sm font-bold lg:text-[16px]">
+                Adherence to Hackathon Rules:{" "}
+              </span>
+              <span className="text-white text-[13px] lg:text-[14px]">
+                Judges will Ensure that the team adhered to the rules and
+                guidelines of the hackathon, including deadlines, use of
+                specific technologies or APIs, and any other
+                competition-specific requirements.
+              </span>
             </div>
           </div>
-          <button className="button py-[18px] w-44 mt-4 lg:font-bold">Read More</button>
+          <Star
+            color="white"
+            size="lg"
+            className="-bottom-8 left-[10%] md:-left-10"
+            twinkle={true}
+          />
+          <button className="button py-[18px] w-[172px] mt-8 text-white text-base">
+            Read More
+          </button>
         </div>
       </div>
     </div>
-   );
+  );
 }
 
 export default Info;

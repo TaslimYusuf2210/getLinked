@@ -1,5 +1,6 @@
 import { HiMenuAlt1 } from "react-icons/hi";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ function Navbar() {
   }
 
   return ( 
-    <div className="w-full xl:max-w-[1812px] xl:mx-auto">
+    <div className="w-full sticky top-0 z-50 backdrop-blur-md bg-customPurple-darker/80 transition-all duration-300 border-b border-customPurple border-opacity-30">
       <nav className="w-full px-14 py-6 list-none flex items-center justify-between text-sm lg:px-20">
         <li className="text-xl font-bold text-white lg:text-3xl xl:text-4xl"><a href="#hero">get<span className="text-customPurple">linked</span></a></li>
         <div className="lg:flex justify-center items-center gap-16 xl:gap-32 hidden">
@@ -27,7 +28,7 @@ function Navbar() {
             <li><a className="navstyle" href="#timeline" onClick={(e) => handleSmoothScroll(e, 'timeline')}>Timeline</a></li>
             <li><a className="navstyle" href="#overview" onClick={(e) => handleSmoothScroll(e, 'overview')}>Overview</a></li>
             <li><a className="navstyle" href="#faq" onClick={(e) => handleSmoothScroll(e, 'faq')}>FAQs</a></li>
-            <li><a className="navstyle font-montserrat" href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')}>Contact</a></li>
+            <Link className="navstyle font-montserrat" to="/contact">Contact</Link>
           </span>
           <button className="button w-36 py-[14px] gradient-button xl:w-44 lg:text-base lg:font-bold transition-all duration-300">
             Register
@@ -36,7 +37,6 @@ function Navbar() {
 
         <li className="lg:hidden" onClick={toggleNavbarDropdown}><HiMenuAlt1 className="font-bold text-white cursor-pointer"/></li>
       </nav>
-      <hr className="border-customPurple border-opacity-30"/>
       {isOpen && 
         <div>
           <div className="fixed inset-0 top-20 bg-black/40 z-10 lg:hidden" onClick={() => setIsOpen(false)}></div>
@@ -46,13 +46,13 @@ function Navbar() {
                 <li><a className="navstyle" href="#timeline" onClick={(e) => handleSmoothScroll(e, 'timeline')}>Timeline</a></li>
                 <li><a className="navstyle" href="#overview" onClick={(e) => handleSmoothScroll(e, 'overview')}>Overview</a></li>
                 <li><a className="navstyle" href="#faq" onClick={(e) => handleSmoothScroll(e, 'faq')}>FAQs</a></li>
-                <li><a className="navstyle" href="#contact" onClick={(e) => {handleSmoothScroll(e, 'contact'); }}>Contact</a></li>
+                <Link className="navstyle" to="/contact">Contact</Link>
               </span>
-              <li>
+              <Link to="/register">
                 <button className="button w-36 py-[14px] gradient-button text-sm font-black font-montserrat transition-all duration-300">
                   Register
                 </button>
-              </li>
+              </Link>
             </span>
         </div>
         </div>

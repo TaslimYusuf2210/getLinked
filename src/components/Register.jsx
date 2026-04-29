@@ -40,11 +40,11 @@ function Register() {
     return () => clearInterval(timer);
   }, []);
   return (
-    <div id="hero">
+    <div id="hero" className="relative overflow-hidden min-h-screen flex flex-col justify-center">
       <img className="absolute md:left-[55%] md:top-[30%] top-[15%] left-[75%] sm:left-[78%] w-1 sm:w-2 md:w-5 lg:w-6 xl:w-8 hidden sm:block" src={star} alt="star" />
       <img className="absolute z-20 md:left-[35%] md:top-[60%] lg:top-[70%] top-[35%] left-[60%] sm:left-[65%] w-[8px] sm:w-[10px] md:w-5 lg:w-6 xl:w-8 hidden sm:block" src={star} alt="star" />
       <img className="absolute z-10 md:left-[10%] md:top-[15%] top-[18%] left-[28%] sm:left-[30%] md:w-5 lg:w-6 xl:w-8 w-2 sm:w-3 hidden sm:block" src={whiteStar} alt="star" />
-      <img className="absolute z-0 left-0 top-0 xl:w-[1086px] lg:w-[800px]" src={purpleLensFlare} alt="flare" />
+      <img className="absolute z-0 -top-[10%] -left-[10%] w-[80%] max-w-[800px] xl:max-w-[1086px] opacity-100 mix-blend-screen pointer-events-none" src={purpleLensFlare} alt="flare" />
       <div className="md:px-16 md:flex md:justify-between md:w-full  hidden">
         <div></div>
         <div>
@@ -58,7 +58,7 @@ function Register() {
           />
         </div>
       </div>
-      <div className="py-4 text-center md:text-left md:flex md:px-16">
+      <div className="py-4 text-center md:text-left md:flex md:px-16 items-center">
         <img
           className="absolute top-0 z-0 bottom-2 md:left-28 md:mb-8 md:hidden"
           src={purpleLensFlare}
@@ -74,9 +74,8 @@ function Register() {
               <img className="w-[115px] " src={redLine} alt="redLine" />
             </div>
           </div> */}
-          <div className="font-bold text-[32px] z-10 font-clashDisplay md:text-[36px] lg:text-5xl xl:text-[76px]">
-              <img className="relative top-6 left-56 lg:left-[310px] lg:top-4 xl:w-8 xl:left-[490px]" src={bulb} alt="bulb" />
-              getlinked Tech <br />
+          <div className="font-bold text-[32px] z-10 font-clashDisplay md:text-[36px] lg:text-5xl xl:text-[76px] relative">
+              getlinked <span className="relative">Tech<img className="absolute -top-6 right-2 w-6 md:w-8 lg:w-10 xl:w-14 md:-top-8 lg:-top-10 xl:-top-14 xl:right-4" src={bulb} alt="bulb" /></span> <br />
             <div className="flex justify-center relative">
               <span>Hackathon</span>
               <span className="text-customPurple">1.0</span>
@@ -96,9 +95,9 @@ function Register() {
           </div>
         </div>
         <div className="lg:w-[80%]">
-          <img className="w-full mt-12 lg:w-[90%] lg:ml-12 xl-max-w-full" src={man} alt="man" />
+          <img className="w-full mt-12 lg:w-[90%] lg:mx-auto max-w-full relative z-10" src={man} alt="man" />
           <img
-            className="absolute left-4 top-[530px] w-[90%] md:top-36 md:w-2/5 md:left-[50%] lg:top-[200px] xl:max-w-[700px]"
+            className="absolute left-1/2 -translate-x-1/2 top-[50%] md:top-1/4 w-[90%] md:w-[45%] md:left-[60%] lg:top-[15%] xl:max-w-[700px] pointer-events-none z-20"
             src={crystalball}
             alt="crystalball"
           />
