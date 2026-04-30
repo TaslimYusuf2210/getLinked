@@ -1,5 +1,6 @@
 import AccordionItem from "./accordion";
 import thinking from "../assets/thinking.svg"
+import Glow from "./Glow";
 
 function Questions() {
   // const AccordionItem = () => {
@@ -34,7 +35,7 @@ function Questions() {
     },
   ];
   return (
-    <div className="flex flex-col justify-center font-montserrat text-[12px] md:text-base">
+    <div className="flex flex-col px-6 justify-center font-montserrat text-[12px] md:text-base">
       <div className="text-center lg:hidden">
         <h4 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-loose">
           Frequently Asked <br />
@@ -69,13 +70,14 @@ function Questions() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center mt-16 lg:mt-0 lg:w-full lg:h-full">
+        <div className="flex flex-col justify-center items-center mt-16 lg:mt-0 lg:w-full lg:h-full relative">
+          <Glow className="-top-10 left-0 md:-top-20 md:-left-10 lg:-top-32 lg:left-10" size="lg" />
           <div className="hidden md:block relative w-full h-64 lg:h-auto">
-            <span className="q-mark z-0 text-[40px] text-[#A866FD] right-24 top-12 xl:text-7xl xl:top-16 xl:right-28">?</span>
-            <span className="q-mark text-6xl text-customPurple  right-10 top-8 z-20 xl:text-9xl">?</span>
-            <span className="q-mark text-[40px] text-[#A866FD] left-2 top-12 z-20 md:bottom-1 xl:text-7xl xl:top-16 xl:left-6">?</span>
+            <span className="q-mark z-0 text-[40px] text-[#A866FD] right-24 top-12 lg:text-7xl lg:top-[100px] lg:-right-[110px]">?</span>
+            <span className="q-mark text-6xl text-customPurple right-10 top-8 z-20 lg:text-9xl lg:top-20 lg:left-[150px]">?</span>
+            <span className="q-mark text-[40px] text-[#A866FD] left-2 top-12 z-20 md:bottom-1 lg:text-7xl lg:top-[100px] lg:left-[200px]">?</span>
           </div>
-          <img className="z-10 md:w-[500px] xl:w-[741px] xl:h-[741px]" src={thinking} alt="think" />
+          <img className="z-10 md:w-[500px] lg:w-[741px] lg:h-[741px]" src={thinking} alt="think" />
         </div>
       </div>
     </div>

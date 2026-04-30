@@ -5,8 +5,7 @@ import bulb from "../assets/bulb.svg";
 import purpleLensFlare from "../assets/PurpleLensFlare.svg";
 import man from "../assets/man.svg";
 import crystalball from "../assets/crystalball.svg";
-import star from "../assets/star.svg"
-import whiteStar from "../assets/white star.svg"
+import Glow from "./Glow";
 import { useState, useEffect } from "react";
 
 function Register() {
@@ -41,10 +40,7 @@ function Register() {
   }, []);
   return (
     <div id="hero" className="relative overflow-hidden min-h-screen flex flex-col justify-center">
-      <img className="absolute md:left-[55%] md:top-[30%] top-[15%] left-[75%] sm:left-[78%] w-1 sm:w-2 md:w-5 lg:w-6 xl:w-8 hidden sm:block" src={star} alt="star" />
-      <img className="absolute z-20 md:left-[35%] md:top-[60%] lg:top-[70%] top-[35%] left-[60%] sm:left-[65%] w-[8px] sm:w-[10px] md:w-5 lg:w-6 xl:w-8 hidden sm:block" src={star} alt="star" />
-      <img className="absolute z-10 md:left-[10%] md:top-[15%] top-[18%] left-[28%] sm:left-[30%] md:w-5 lg:w-6 xl:w-8 w-2 sm:w-3 hidden sm:block" src={whiteStar} alt="star" />
-      <img className="absolute z-0 -top-[10%] -left-[10%] w-[80%] max-w-[800px] xl:max-w-[1086px] opacity-100 mix-blend-screen pointer-events-none" src={purpleLensFlare} alt="flare" />
+      {/* <img className="absolute z-0 -top-[10%] -left-[10%] w-[80%] max-w-[800px] xl:max-w-[1086px] opacity-100 mix-blend-screen pointer-events-none" src={purpleLensFlare} alt="flare" /> */}
       <div className="md:px-16 md:flex md:justify-between md:w-full  hidden">
         <div></div>
         <div>
@@ -59,11 +55,12 @@ function Register() {
         </div>
       </div>
       <div className="py-4 text-center md:text-left md:flex md:px-16 items-center">
-        <img
+        {/* <img
           className="absolute top-0 z-0 bottom-2 md:left-28 md:mb-8 md:hidden"
           src={purpleLensFlare}
           alt="gradient"
-        />
+        /> */}
+        <Glow className="top-0 -left-[10%] md:-top-[10%] md:left-0 opacity-100" size="lg" />
         <div className="flex flex-col justify-center items-center md:w-3/5 md:items-start z-10">
           {/* <div className="md:hidden flex flex-col w-[325px] mx-9 ">
             <p className="font-base italic text-white font-bold font-montserrat">
@@ -74,13 +71,13 @@ function Register() {
               <img className="w-[115px] " src={redLine} alt="redLine" />
             </div>
           </div> */}
-          <div className="font-bold text-[32px] z-10 font-clashDisplay md:text-[36px] lg:text-5xl xl:text-[76px] relative">
+          <div className="font-bold text-[32px] z-10 font-clashDisplay md:text-[36px] lg:text-[60px] relative">
               getlinked <span className="relative">Tech<img className="absolute -top-6 right-2 w-6 md:w-8 lg:w-10 xl:w-14 md:-top-8 lg:-top-10 xl:-top-14 xl:right-4" src={bulb} alt="bulb" /></span> <br />
             <div className="flex justify-center relative">
               <span>Hackathon</span>
               <span className="text-customPurple">1.0</span>
-              <img className="xl:w-16" src={chain} alt="chain" />
-              <img className="xl:w-16" src={spark} alt="spark" />
+              <img className="lg:w-12" src={chain} alt="chain" />
+              <img className="lg:w-12" src={spark} alt="spark" />
             </div>
           </div>
           <p className="text-sm font-montserrat mt-8 lg:text-base xl:text-xl">
@@ -94,7 +91,7 @@ function Register() {
             <span className="font-montserrat text-sm">S</span>
           </div>
         </div>
-        <div className="lg:w-[80%]">
+        <div className="lg:w-full">
           <img className="w-full mt-12 lg:w-[90%] lg:mx-auto max-w-full relative z-10" src={man} alt="man" />
           <img
             className="absolute left-1/2 -translate-x-1/2 top-[50%] md:top-1/4 w-[90%] md:w-[45%] md:left-[60%] lg:top-[15%] xl:max-w-[700px] pointer-events-none z-20"

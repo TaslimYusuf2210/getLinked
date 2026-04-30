@@ -21,18 +21,19 @@ function Navbar() {
 
   return ( 
     <div className="w-full sticky top-0 z-50 backdrop-blur-md bg-customPurple-darker/80 transition-all duration-300 border-b border-customPurple border-opacity-30">
-      <nav className="w-full px-14 py-6 list-none flex items-center justify-between text-sm lg:px-20">
+      <nav className="w-full px-14 py-6 list-none flex items-center justify-between text-sm lg:px-16">
         <li className="text-xl font-bold text-white lg:text-3xl xl:text-4xl"><a href="#hero">get<span className="text-customPurple">linked</span></a></li>
         <div className="lg:flex justify-center items-center gap-16 xl:gap-32 hidden">
-          <span className="flex gap-7 font-medium lg:text-base xl:gap-20 ">
+          <span className="flex gap-10 font-medium lg:text-base  ">
+            <Link className="navstyle font-montserrat" to="/">Home</Link>
             <li><a className="navstyle" href="#timeline" onClick={(e) => handleSmoothScroll(e, 'timeline')}>Timeline</a></li>
             <li><a className="navstyle" href="#overview" onClick={(e) => handleSmoothScroll(e, 'overview')}>Overview</a></li>
             <li><a className="navstyle" href="#faq" onClick={(e) => handleSmoothScroll(e, 'faq')}>FAQs</a></li>
             <Link className="navstyle font-montserrat" to="/contact">Contact</Link>
           </span>
-          <button className="button w-36 py-[14px] gradient-button xl:w-44 lg:text-base lg:font-bold transition-all duration-300">
+          <Link to="/register" className="navButton py-[14px] px-12 gradient-button lg:text-base lg:font-bold transition-all duration-300">
             Register
-          </button>
+          </Link>
         </div>
 
         <li className="lg:hidden" onClick={toggleNavbarDropdown}><HiMenuAlt1 className="font-bold text-white cursor-pointer"/></li>
@@ -48,10 +49,8 @@ function Navbar() {
                 <li><a className="navstyle" href="#faq" onClick={(e) => handleSmoothScroll(e, 'faq')}>FAQs</a></li>
                 <Link className="navstyle" to="/contact">Contact</Link>
               </span>
-              <Link to="/register">
-                <button className="button w-36 py-[14px] gradient-button text-sm font-black font-montserrat transition-all duration-300">
+              <Link to="/register" className="button w-36 py-[14px] gradient-button text-sm font-black font-montserrat transition-all duration-300">
                   Register
-                </button>
               </Link>
             </span>
         </div>

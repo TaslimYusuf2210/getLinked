@@ -23,7 +23,7 @@ export default {
         }, 
       },
       screens: {
-        'xl': '1512px', // Custom extra-large viewport size
+        // 'xl': '1512px', 
       },
       keyframes: {
         twinkle: {

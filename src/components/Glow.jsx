@@ -1,29 +1,28 @@
 import React from 'react';
+import rulesFlareOne from '../assets/rulesFlareOne.svg';
 
 export const Glow = ({ 
-  color = 'purple', 
   size = 'md', 
   className = ''
 }) => {
   const sizeClasses = {
-    sm: 'w-[150px] h-[150px] blur-[70px]',
-    md: 'w-[300px] h-[300px] blur-[120px]',
-    lg: 'w-[450px] h-[450px] blur-[160px]',
-  };
-  
-  const colorClasses = {
-    purple: 'bg-customPurple',
-    light: 'bg-customPurple-light',
-    dark: 'bg-customPurple-dark',
+    sm: 'w-[300px] h-auto',
+    md: 'w-[500px] h-[500px]',
+    lg: 'w-[800px] h-auto',
+    full: 'w-full h-auto',
   };
 
   const selectedSize = sizeClasses[size] || size;
-  const selectedColor = colorClasses[color] || color;
 
   return (
-    <div 
-      className={`absolute rounded-full opacity-60 mix-blend-screen pointer-events-none ${selectedSize} ${selectedColor} ${className}`}
-    ></div>
+    <div className={`absolute pointer-events-none z-0 mix-blend-screen ${className}`}>
+      <img 
+        src={rulesFlareOne} 
+        alt="" 
+        className={`${selectedSize} object-cover`}
+        aria-hidden="true"
+      />
+    </div>
   );
 };
 

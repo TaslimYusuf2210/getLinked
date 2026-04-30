@@ -7,7 +7,7 @@ import Glow from "./Glow";
 
 function Info() {
   return (
-    <div className="text-center mt-8 xl:px-14">
+    <div className="text-center xl:px-14">
       {/* aesthetics here */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:pr-[10%] xl:pr-0 xl:gap-10">
         <div className="grid">
@@ -39,15 +39,21 @@ function Info() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:pl-[5%]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:pl-[5%] relative">
+        {/* Glow under rules and guideline text */}
+        <Glow size="lg" className="top-[40%] md:top-[60%] left-[5%] md:-left-[5%]" />
+        
+        {/* Glow right of rules and guideline image */}
+        <Glow size="lg" className="top-[10%] -right-[5%] md:-right-[10%]" />
+
         <div className="grid md:order-2">
           <img
             src={rulesImage}
             alt="image"
-            className="place-self-center w-[80%] max-w-md xl:max-w-none xl:w-[664px] xl:h-[664px] hover:scale-105 transition-transform duration-500"
+            className="place-self-center w-[80%] max-w-md xl:max-w-none xl:w-[664px] xl:h-[664px] hover:scale-105 transition-transform duration-500 relative z-10"
           />
         </div>
-        <div className="m-8 place-self-center w-full max-w-[90%] md:max-w-lg md:order-1 md:text-left md:w-auto px-4 md:px-0">
+        <div className="m-8 place-self-center w-full max-w-[90%] md:max-w-lg md:order-1 md:text-left md:w-auto px-4 md:px-0 relative z-10">
           <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] lg:leading-normal">
             Rules and
             <br />
@@ -63,12 +69,13 @@ function Info() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-2 mt-16 xl:mt-24 relative">
-        <div className="absolute top-[20%] left-[5%] md:left-[10%] -z-10">
-          <Glow size="lg" color="purple" />
+      <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 xl:mt-24 relative items-center gap-8">
+        {/* Glow below judging criteria image */}
+        <div className="absolute bottom-[-10%] md:bottom-[-20%] left-[5%] md:left-[10%] -z-10">
+          <Glow size="lg" />
         </div>
 
-        <div className="grid md:order-2 xl:order-1 relative">
+        <div className="grid relative w-full">
           <Star
             color="purple"
             size="lg"
@@ -78,7 +85,7 @@ function Info() {
           <img
             src={judgeImage}
             alt="image"
-            className="place-self-center w-[80%] max-w-md md:w-[60%] xl:max-w-none xl:w-full xl:mt-20 hover:scale-105 transition-transform duration-500 relative z-10"
+            className="place-self-center lg:w-full lg:px-16 xl:mt-20 hover:scale-105 transition-transform duration-500 relative z-10"
           />
           <Star
             color="grey"
@@ -87,7 +94,7 @@ function Info() {
             twinkle={true}
           />
         </div>
-        <div className="m-12 md:order-1 text-left w-full max-w-[90%] place-self-center md:max-w-lg lg:w-auto lg:px-[10%] xl:px-0 xl:order-2 px-4 md:px-0 relative">
+        <div className="m-12 text-left w-full  place-self-center lg:pr-16 lg:pl-0 relative">
           <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-normal">
             Judging Criteria
             <br />
