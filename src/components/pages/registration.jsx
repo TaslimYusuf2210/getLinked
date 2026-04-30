@@ -39,14 +39,14 @@ function Registration() {
   };
 
   return (
-    <div className="font-montserrat py-6 px-14 md:text-left lg:grid lg:grid-cols-2 lg:place-items-center lg:px-20 lg:py-28 ">
-      <img className="hidden lg:block absolute z-0 bottom-0 right-0" src={leftFlare} alt="flare" />
-      <img className=" hidden lg:block absolute z-0 top-0 left-0" src={rightFlare} alt="flare" />
-      <div className="hidden w-full lg:grid place-items-start mr-40">
-      <img className="w-full z-10 " src={designer} alt="designer" />
+    <div className="font-montserrat py-10 px-8 md:px-14 lg:grid lg:grid-cols-2 lg:place-items-center lg:px-20 lg:py-28 min-h-screen relative">
+      <img className="hidden lg:block absolute z-0 bottom-0 right-0 mix-blend-screen" src={leftFlare} alt="flare" />
+      <img className=" hidden lg:block absolute z-0 top-0 left-0 mix-blend-screen" src={rightFlare} alt="flare" />
+      <div className="hidden w-full lg:grid place-items-start pr-10 xl:pr-20">
+      <img className="w-full relative z-10 transition-transform duration-700 hover:scale-105" src={designer} alt="designer" />
       </div>
-      <div className=" lg:bg-white/10 lg:backdrop-blur-lg lg:shadow-2xl lg:rounded-lg lg:w-full">
-      <div className="lg:mx-6 lg:my-8">
+      <div className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-[0_0_30px_rgba(212,52,254,0.1)] p-6 md:p-10 lg:p-12 transition-all duration-500 hover:shadow-[0_0_50px_rgba(212,52,254,0.2)] hover:-translate-y-1 relative z-10">
+      <div className="w-full">
         <div className="text-left">
           <h6 className="text-customPurple font-clashDisplay font-bold md:font-semibold md:text-[32px] lg:text-4xl">
             Register
@@ -61,86 +61,86 @@ function Registration() {
             CREATE YOUR ACCOUNT
           </h2>
           <form onSubmit={handleSubmit(onSubmit)} action="">
-            <div className="w-full grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
-              <div className="w-full text-[13px] lg:text-[15px]">
-                <label htmlFor="">Team's Name</label>
+            <div className="w-full grid grid-cols-1 gap-5 mt-6 md:grid-cols-2">
+              <div className="w-full text-[13px] lg:text-[15px] group">
+                <label className="mb-2 block font-medium">Team's Name</label>
                 <input
-                  className="input-border text-[14px] px-6"
+                  className="input-border text-[14px] px-6 bg-transparent hover:bg-white/5 transition-colors duration-300"
                   placeholder="Enter the name of your group"
                   type="text"
                   {...register("teamsName")}
                 />
-                <p className="text-xs text-red-500">{errors.teamsName?.message}</p>
+                <p className="text-xs text-red-500 mt-1">{errors.teamsName?.message}</p>
               </div>
-              <div className="w-full text-[13px] lg:text-[15px]">
-                <label htmlFor="">Phone</label>
+              <div className="w-full text-[13px] lg:text-[15px] group">
+                <label className="mb-2 block font-medium">Phone</label>
                 <input
-                  className="input-border text-[14px] px-6"
+                  className="input-border text-[14px] px-6 bg-transparent hover:bg-white/5 transition-colors duration-300"
                   placeholder="Enter your phone number"
                   type="number"
                   {...register("phoneNumber")}
                 />
-                <p className="text-xs text-red-500">{errors.phoneNumber?.message}</p>
+                <p className="text-xs text-red-500 mt-1">{errors.phoneNumber?.message}</p>
               </div>
-              <div className="w-full text-[13px] lg:text-[15px]">
-                <label htmlFor="">Email Address</label>
+              <div className="w-full text-[13px] lg:text-[15px] group">
+                <label className="mb-2 block font-medium">Email Address</label>
                 <input
-                  className="input-border text-[14px] px-6"
+                  className="input-border text-[14px] px-6 bg-transparent hover:bg-white/5 transition-colors duration-300"
                   placeholder="Enter your email address"
                   type="text"
                   {...register("emailAddress")}
                 />
-                <p className="text-xs text-red-500">{errors.emailAddress?.message}</p> 
+                <p className="text-xs text-red-500 mt-1">{errors.emailAddress?.message}</p> 
               </div>
-              <div className="w-full text-[13px] lg:text-[15px]">
-                <label htmlFor="">Project Topic</label>
+              <div className="w-full text-[13px] lg:text-[15px] group">
+                <label className="mb-2 block font-medium">Project Topic</label>
                 <input
-                  className="input-border text-[14px] px-6"
+                  className="input-border text-[14px] px-6 bg-transparent hover:bg-white/5 transition-colors duration-300"
                   placeholder="What is your project topic"
                   type="text"
                   {...register("projectTopic")}
                 />
-                <p className="text-xs text-red-500">{errors.projectTopic?.message}</p> 
+                <p className="text-xs text-red-500 mt-1">{errors.projectTopic?.message}</p> 
               </div>
             </div>
-            <div className="w-full grid grid-cols-2 gap-2 mt-4">
-              <div className=" text-[13px] lg:text-[15px] grid grid-col-1 w-full">
-                <label htmlFor="">Category</label>
+            <div className="w-full grid grid-cols-2 gap-4 mt-5">
+              <div className="text-[13px] lg:text-[15px] w-full group">
+                <label className="mb-2 block font-medium">Category</label>
                 <select
-                  className=" input-border  text-white"
+                  className="input-border px-4 bg-transparent hover:bg-white/5 transition-colors duration-300 cursor-pointer"
                   name=""
                   id=""
                   {...register("category")}
                 >
-                  <option value="" selected disabled>
+                  <option value="" selected disabled className="bg-customPurple-darker">
                     Select your category
                   </option>
-                  <option value="">
-                    category
+                  <option value="category1" className="bg-customPurple-darker">
+                    category 1
                   </option>
                 </select>
-                <p className="text-xs text-red-500">{errors.category?.message}</p> 
+                <p className="text-xs text-red-500 mt-1">{errors.category?.message}</p> 
 
               </div>
-              <div className="w-full text-[13px] lg:text-[15px] grid grid-col-1">
-                <label htmlFor="">Group Size</label>
+              <div className="w-full text-[13px] lg:text-[15px] group">
+                <label className="mb-2 block font-medium">Group Size</label>
                 <select
-                  className="input-border"
+                  className="input-border px-4 bg-transparent hover:bg-white/5 transition-colors duration-300 cursor-pointer"
                   name=""
                   id=""
                   {...register("groupSize")}
 
                 >
-                  <optgroup className="text-sm">
+                  <optgroup className="text-sm bg-customPurple-darker">
                     <option value="" selected disabled>
                       Select
                     </option>
-                    <option value="" >
+                    <option value="test" >
                       Test
                     </option>
                   </optgroup>
                 </select>
-                <p className="text-xs text-red-500">{errors.groupSize?.message}</p> 
+                <p className="text-xs text-red-500 mt-1">{errors.groupSize?.message}</p> 
 
               </div>
             </div>
