@@ -4,9 +4,9 @@ import vector from "../assets/Vector.svg";
 
 function PrivacyPolicy() {
   return (
-    <div className="py-40">
+    <div className="lg:py-40">
       <div className="flex flex-col items-center font-montserrat mt-6 pt-6 ">
-        <div className="grid grid-cols-1 w-full">
+        <div className="grid grid-cols-1 md:place-items-center w-full">
           <div className="text-center lg:hidden">
             <h4 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-snug">
               Privacy Policy and <br />{" "}
@@ -21,7 +21,7 @@ function PrivacyPolicy() {
               participant
             </p>
           </div>
-          <div className="lg:flex lg:px-16 lg:items-start lg:gap-10">
+          <div className="lg:flex lg:px-16 lg:items-start lg:gap-10 ">
             <div className="space-y-12 place-self-start lg:w-1/2 lg:flex lg:flex-col lg:justify-start lg:items-start">
               <div className="space-y-6 lg:text-left hidden lg:block mt-20">
                 <h4 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-snug">
@@ -97,10 +97,10 @@ function PrivacyPolicy() {
           </div>
         </div>
 
-        <div className="grid place-items-center md:w-full mt-16 md:mt-32 lg:hidden">
-          <img className="z-0 md:w-1/2" src={vector} alt="vector" />
+        <div className="grid place-items-center md:w-full mt-16 md:mt-10 lg:hidden">
+          <img className="z-0 lg:w-1/2 md:w-2/5" src={vector} alt="vector" />
           <img
-            className="relative bottom-56 md:w-1/2 md:bottom-96"
+            className="relative bottom-56 lg:w-1/2 md:w-2/5 md:bottom-96 "
             src={keylock}
             alt="keylock"
           />

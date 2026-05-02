@@ -72,8 +72,8 @@ function Questions() {
         </div>
         <div className="flex flex-col justify-center items-center mt-16 lg:mt-0 lg:w-full lg:h-full relative">
           <Glow className="-top-10 left-0 md:-top-20 md:-left-10 lg:-top-32 lg:left-10" size="lg" />
-          <div className="hidden md:block relative w-full h-64 lg:h-auto">
-            <span className="q-mark z-0 text-[40px] text-[#A866FD] right-24 top-12 lg:text-7xl lg:top-[100px] lg:-right-[110px]">?</span>
+          <div className="hidden md:flex md:justify-center lg:block relative w-full lg:h-auto">
+            <span className="q-mark z-0 text-[40px] text-[#A866FD] right-24 top-12  lg:text-7xl lg:top-[100px] lg:-right-[110px]">?</span>
             <span className="q-mark text-6xl text-customPurple right-10 top-8 z-20 lg:text-9xl lg:top-20 lg:left-[150px]">?</span>
             <span className="q-mark text-[40px] text-[#A866FD] left-2 top-12 z-20 md:bottom-1 lg:text-7xl lg:top-[100px] lg:left-[200px]">?</span>
           </div>

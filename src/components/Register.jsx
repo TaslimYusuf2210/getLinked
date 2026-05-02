@@ -72,13 +72,29 @@ function Register() {
             </div>
           </div> */}
           <div className="font-bold text-[32px] z-10 font-clashDisplay md:text-[36px] lg:text-[60px] relative">
-              getlinked <span className="relative">Tech<img className="absolute -top-6 right-2 w-6 md:w-8 lg:w-10 xl:w-14 md:-top-8 lg:-top-10 xl:-top-14 xl:right-4" src={bulb} alt="bulb" /></span> <br />
+              {/* getlinked <span className="relative">Tech<img className="absolute -top-6 right-2 w-6 md:w-8 lg:w-10 xl:w-14 md:-top-8 lg:-top-10 xl:-top-14 xl:right-4" src={bulb} alt="bulb" /></span> <br />
             <div className="flex justify-center relative">
               <span>Hackathon</span>
               <span className="text-customPurple">1.0</span>
-              <img className="lg:w-12" src={chain} alt="chain" />
-              <img className="lg:w-12" src={spark} alt="spark" />
+              <img className="lg:w-12 xl:block lg:hidden" src={chain} alt="chain" />
+              <img className="lg:w-12 xl:block lg:hidden" src={spark} alt="spark" />
+            </div> */}
+            <div className="flex items-center justify-center">
+              <span>
+                getLinked
+              </span>
+              <span className="flex justify-start items-start">
+                <img src={bulb} alt="bulb" />
+                Tech
+              </span>
             </div>
+            <div className="flex items-center justify-start">
+              <p className="">Hackathon </p>
+              <span className="text-customPurple-dark">1.0</span>
+              <img src={chain} alt="chain" />
+              <img src={spark} alt="spark" />
+            </div>
+            
           </div>
           <p className="text-sm font-montserrat mt-8 lg:text-base xl:text-xl">
             Participate in getlinked tech Hackathon <br />
@@ -91,10 +107,10 @@ function Register() {
             <span className="font-montserrat text-sm">S</span>
           </div>
         </div>
-        <div className="lg:w-full">
+        <div className="xl:w-full lg:ml-8">
           <img className="w-full mt-12 lg:w-[90%] lg:mx-auto max-w-full relative z-10" src={man} alt="man" />
           <img
-            className="absolute left-1/2 -translate-x-1/2 top-[50%] md:top-1/4 w-[90%] md:w-[45%] md:left-[60%] lg:top-[15%] xl:max-w-[700px] pointer-events-none z-20"
+            className="absolute left-1/2 -translate-x-1/2 top-[50%] md:top-1/4 w-[90%] md:w-[35%] lg:w-[45%] md:left-[60%] lg:top-[15%] xl:max-w-[700px] pointer-events-none z-20"
             src={crystalball}
             alt="crystalball"
           />
