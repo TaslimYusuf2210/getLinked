@@ -7,8 +7,8 @@ import Registration from "./components/pages/registration";
 function App() {
 
   return (
-    <div className="bg-customPurple-darker overflow-x-hidden">
-    <div className="max-w-[1380px] mx-auto text-white min-h-screen">
+    <div className="bg-customPurple-darker">
+      <div className="max-w-[1380px] mx-auto text-white min-h-screen pt-24 lg:pt-24">
           <Router>
             <Navbar />
             <Routes>

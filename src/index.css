@@ -6,6 +6,9 @@
   html {
     scroll-behavior: smooth;
   }
+  body {
+    @apply overflow-x-hidden bg-customPurple-darker;
+  }
 }
 
 @layer components {

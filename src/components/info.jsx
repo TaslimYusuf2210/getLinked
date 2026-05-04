@@ -7,24 +7,24 @@ import Glow from "./Glow";
 
 function Info() {
   return (
-    <div className="text-center md:px-16">
+    <div className="text-center md:px-10 lg:px-16 px-6 mt-12 md:mt-0">
       {/* aesthetics here */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:pr-0 xl:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:pr-0 xl:gap-10 w-full">
         <div className="grid">
-          <div className="place-self-center flex justify-end items-end xl:w-full xl:h-full">
+          <div className="place-self-center flex md:justify-end md:items-end justify-center items-center md:w-4/5 w-full xl:w-full xl:h-full">
             <img
-              className="place-self-center w-[80%] max-w-md xl:max-w-none xl:w-[490px] xl:h-[477px] hover:scale-105 transition-transform duration-500"
+              className="place-self-center lg:w-[80%] md:w-full sm:w-3/5 w-4/5 lg:max-w-md xl:max-w-none xl:w-[490px] xl:h-[477px] hover:scale-105 transition-transform duration-500"
               src={bigIdea}
               alt="big idea"
             />
             <img
-              className="lg:w-12 lg:h-14 md:w-9 md:h-10"
+              className="lg:w-12 lg:h-14 md:w-9 md:h-10 hidden md:block"
               src={arrow}
               alt="arrow"
             />
           </div>
         </div>
-        <div className="my-8 place-self-center w-full max-w-[90%] md:text-left md:w-auto">
+        <div className="my-8 place-self-center w-full max-w-[90%] md:text-left md:w-full">
           <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] lg:leading-normal">
             Introduction to getlinked <br />
             <span className="text-customPurple"> tech Hackathon 1.0</span>
@@ -39,7 +39,7 @@ function Info() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2  relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4  relative">
         {/* Glow under rules and guideline text */}
         <Glow size="lg" className="top-[40%] md:top-[60%] left-[5%] md:-left-[5%]" />
         
@@ -50,10 +50,10 @@ function Info() {
           <img
             src={rulesImage}
             alt="image"
-            className="place-self-center w-[80%] max-w-md xl:max-w-none xl:w-[664px] xl:h-[664px] hover:scale-105 transition-transform duration-500 relative z-10"
+            className="place-self-center  md:w-4/5 sm:w-3/5 w-4/5 xl:max-w-none xl:w-[664px] xl:h-[664px] hover:scale-105 transition-transform duration-500 relative z-10"
           />
         </div>
-        <div className="my-8 place-self-center w-full max-w-[90%]  md:order-1 md:text-left md:w-auto px-4 md:px-0 relative z-10">
+        <div className="my-8 place-self-center w-full md:order-1 md:text-left md:w-auto px-4 md:px-0 relative z-10">
           <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] lg:leading-normal">
             Rules and
             <br />
@@ -94,7 +94,7 @@ function Info() {
             twinkle={true}
           />
         </div>
-        <div className="my-12 lg:text-left lg:w-full md:w-[70%]  place-self-center lg:pr-16 lg:pl-0 relative">
+        <div className="my-12 lg:text-left lg:w-full md:w-[70%]  place-self-center lg:pr-16 lg:pl-0 relative px-4 md:px-0">
           <h5 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-normal">
             Judging Criteria
             <br />

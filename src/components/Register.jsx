@@ -41,7 +41,7 @@ function Register() {
   return (
     <div id="hero" className="relative overflow-hidden min-h-screen flex flex-col justify-center">
       {/* <img className="absolute z-0 -top-[10%] -left-[10%] w-[80%] max-w-[800px] xl:max-w-[1086px] opacity-100 mix-blend-screen pointer-events-none" src={purpleLensFlare} alt="flare" /> */}
-      <div className="md:px-16 md:flex md:justify-between md:w-full  hidden">
+      <div className="lg:px-16 md:px-10 md:flex md:justify-between md:w-full  hidden">
         <div></div>
         <div>
           <p className="text-base italic text-white font-bold mt-6 font-montserrat lg:text-2xl xl:text-4xl">
@@ -54,7 +54,7 @@ function Register() {
           />
         </div>
       </div>
-      <div className="py-4 text-center md:text-left md:flex md:px-16 items-center">
+      <div className="py-4 text-center md:text-left md:flex md:px-10 items-center">
         {/* <img
           className="absolute top-0 z-0 bottom-2 md:left-28 md:mb-8 md:hidden"
           src={purpleLensFlare}
