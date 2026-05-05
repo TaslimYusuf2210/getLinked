@@ -4,7 +4,7 @@ import Glow from "./Glow"
 
 function PricesAndReward() {
   return ( 
-    <div>
+    <div className="overflow-hidden">
       <div className="flex flex-col justify-center font-montserrat my-6 px-6 py-6">
         <div className="text-center">
           <h4 className="font-clashDisplay text-xl font-bold lg:text-[32px] lg:leading-snug">Prices and <br /> <span className="text-customPurple">Rewards</span></h4>

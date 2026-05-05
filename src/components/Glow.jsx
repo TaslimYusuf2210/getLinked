@@ -15,7 +15,7 @@ export const Glow = ({
   const selectedSize = sizeClasses[size] || size;
 
   return (
-    <div className={`absolute hidden lg:block pointer-events-none z-0 mix-blend-screen ${className}`}>
+    <div className={`absolute hidden xl:block pointer-events-none z-0 mix-blend-screen ${className}`}>
       <img 
         src={rulesFlareOne} 
         alt="" 

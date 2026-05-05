@@ -35,7 +35,7 @@ function Questions() {
     },
   ];
   return (
-    <div className="flex flex-col px-6 justify-center font-montserrat text-[12px] md:text-base">
+    <div className="flex flex-col px-6 justify-center font-montserrat text-[12px] md:text-base overflow-hidden">
       <div className="text-center lg:hidden">
         <h4 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-loose">
           Frequently Asked <br />

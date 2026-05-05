@@ -3,7 +3,7 @@ import Glow from "./Glow"
 
 function PartnersAndSponsors() {
   return (
-  <div>
+  <div className="overflow-hidden">
     <div className="flex flex-col justify-center font-montserrat my-12 px-6 py-6">
         <div className="text-center relative z-10">
           <h4 className="font-clashDisplay text-xl font-bold lg:text-[32px]">Partners and Sponsors</h4>

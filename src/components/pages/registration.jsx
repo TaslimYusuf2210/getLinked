@@ -39,13 +39,13 @@ function Registration() {
   };
 
   return (
-    <div className="font-montserrat py-10 px-8 md:px-14 lg:grid lg:grid-cols-2 lg:place-items-center lg:px-20 lg:py-28 min-h-screen relative">
+    <div className="font-montserrat py-10 px-6 md:px-10  lg:grid lg:grid-cols-2 lg:place-items-center lg:px-16 lg:py-28 min-h-screen relative">
       <img className="hidden lg:block absolute z-0 bottom-0 right-0 mix-blend-screen" src={leftFlare} alt="flare" />
       <img className=" hidden lg:block absolute z-0 top-0 left-0 mix-blend-screen" src={rightFlare} alt="flare" />
       <div className="hidden w-full lg:grid place-items-start pr-10 xl:pr-20">
       <img className="w-full relative z-10 transition-transform duration-700 hover:scale-105" src={designer} alt="designer" />
       </div>
-      <div className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-[0_0_30px_rgba(212,52,254,0.1)] p-6 md:p-10 lg:p-12 transition-all duration-500 hover:shadow-[0_0_50px_rgba(212,52,254,0.2)] hover:-translate-y-1 relative z-10">
+      <div className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-[0_0_30px_rgba(212,52,254,0.1)] p-2 md:p-6 lg:p-8 transition-all duration-500 hover:shadow-[0_0_50px_rgba(212,52,254,0.2)] hover:-translate-y-1 relative z-10">
       <div className="w-full">
         <div className="text-left">
           <h6 className="text-customPurple font-clashDisplay font-bold md:font-semibold md:text-[32px] lg:text-4xl">

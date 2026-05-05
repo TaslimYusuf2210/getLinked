@@ -2,8 +2,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-import leftFlare from "../../assets/contactFlare2.svg"
-import rightFlare from "../../assets/contactFlare1.svg"
+import Glow from "../../components/Glow";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -57,7 +56,7 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className="font-montserrat relative min-h-screen pb-10">
+    <div id="contact" className="font-montserrat relative min-h-screen pb-10 overflow-hidden">
       <div className="grid gap-10 place-items-center text-left px-16 md:hidden">
         <div className="w-full ">
           <p className="text-xl leading-6 text-customPurple font-clashDisplay mt-10">
@@ -131,12 +130,12 @@ function Contact() {
           </div>
         </div>
       </div>
-
-      <img className="absolute opacity-70 bottom-[-10%] right-[-10%] hidden md:block -z-10 mix-blend-screen pointer-events-none" src={leftFlare} alt="flare" />
       
-      <div className="hidden md:grid md:grid-cols-2 md:min-h-[calc(100vh-120px)] items-center md:px-10 py-16 lg:px-20 z-10 relative">
+      <Glow size="lg" className="bottom-[-10%] right-[-10%] opacity-70" />
+
+      <div className="hidden md:grid md:grid-cols-2 md:min-h-[calc(100vh-120px)] items-center md:px-10 py-16 lg:px-16 z-10 relative">
         <div className="grid grid-cols-1">
-          <img className="absolute opacity-70 -left-[10%] -top-[10%] -z-10 mix-blend-screen pointer-events-none" src={rightFlare} alt="flare" />
+          <Glow size="lg" className="-left-[10%] -top-[10%] opacity-70" />
           <div className="text-sm grid grid-cols-1 gap-4 h-3/6 mt-10">
             <h3 className="text-customPurple font-clashDisplay text-[28px] font-semibold lg:text-4xl xl:text-5xl">Get in touch</h3>
             <p className="lg:text-base xl:text-lg">Contact <br /> Information</p>
@@ -154,9 +153,9 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="w-full lg:px-10">
+        <div className="w-full">
           <form action="" onSubmit={secondHandleSubmit(onSecondSubmit)}>
-            <div className="grid grid-cols-1 gap-6 p-8 lg:p-14 bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_0_20px_rgba(212,52,254,0.1)] rounded-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,52,254,0.2)] hover:-translate-y-2">
+            <div className="grid grid-cols-1 gap-6 p-8 lg:p-8 bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_0_20px_rgba(212,52,254,0.1)] rounded-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,52,254,0.2)] hover:-translate-y-2">
               <header className="text-customPurple font-clashDisplay font-semibold text-xl lg:text-2xl xl:text-3xl mb-4">
                 Questions or need assistance? <br /> Let us know about it!
               </header>

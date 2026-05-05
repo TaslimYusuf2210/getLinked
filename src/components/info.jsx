@@ -39,7 +39,7 @@ function Info() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4  relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 relative overflow-hidden">
         {/* Glow under rules and guideline text */}
         <Glow size="lg" className="top-[40%] md:top-[60%] left-[5%] md:-left-[5%]" />
         
@@ -69,7 +69,7 @@ function Info() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 xl:mt-24 relative items-center gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 xl:mt-24 relative overflow-hidden items-center gap-8">
         {/* Glow below judging criteria image */}
         <div className="absolute bottom-[-10%] md:bottom-[-20%] left-[5%] md:left-[10%] -z-10">
           <Glow size="lg" />

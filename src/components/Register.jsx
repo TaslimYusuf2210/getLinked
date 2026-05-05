@@ -39,7 +39,7 @@ function Register() {
     return () => clearInterval(timer);
   }, []);
   return (
-    <div id="hero" className="relative overflow-hidden min-h-screen flex flex-col justify-center">
+    <div id="hero" className="relative  overflow-hidden min-h-screen flex flex-col justify-center">
       {/* <img className="absolute z-0 -top-[10%] -left-[10%] w-[80%] max-w-[800px] xl:max-w-[1086px] opacity-100 mix-blend-screen pointer-events-none" src={purpleLensFlare} alt="flare" /> */}
       <div className="lg:px-16 md:px-10 md:flex md:justify-between md:w-full  hidden">
         <div></div>
@@ -54,7 +54,7 @@ function Register() {
           />
         </div>
       </div>
-      <div className="py-4 text-center md:text-left md:flex md:px-10 items-center">
+      <div className="py-4 text-center md:text-left md:flex md:px-10 lg:px-16 items-center">
         {/* <img
           className="absolute top-0 z-0 bottom-2 md:left-28 md:mb-8 md:hidden"
           src={purpleLensFlare}
@@ -71,7 +71,7 @@ function Register() {
               <img className="w-[115px] " src={redLine} alt="redLine" />
             </div>
           </div> */}
-          <div className="font-bold text-[32px] z-10 font-clashDisplay md:text-[36px] lg:text-[60px] relative">
+          <div className="font-bold text-[32px] z-10 font-clashDisplay md:text-[36px] xl:text-[60px] lg:text-[48px] relative">
               {/* getlinked <span className="relative">Tech<img className="absolute -top-6 right-2 w-6 md:w-8 lg:w-10 xl:w-14 md:-top-8 lg:-top-10 xl:-top-14 xl:right-4" src={bulb} alt="bulb" /></span> <br />
             <div className="flex justify-center relative">
               <span>Hackathon</span>

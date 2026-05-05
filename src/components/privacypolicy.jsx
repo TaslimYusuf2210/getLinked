@@ -4,7 +4,7 @@ import vector from "../assets/Vector.svg";
 
 function PrivacyPolicy() {
   return (
-    <div className="lg:py-40 ">
+    <div className="lg:py-40 lg:px-16 md:px-10 px-6">
       <div className="flex flex-col items-center font-montserrat mt-6 pt-6 ">
         <div className="grid grid-cols-1 md:place-items-center w-full">
           <div className="text-center lg:hidden">
@@ -21,8 +21,8 @@ function PrivacyPolicy() {
               participant
             </p>
           </div>
-          <div className="lg:flex lg:px-16 md:px-10 px-8 lg:items-start lg:gap-10 ">
-            <div className="space-y-12 place-self-start lg:w-1/2 lg:flex lg:flex-col lg:justify-start lg:items-start">
+          <div className="lg:flex lg:px-0 md:px-10 px-8 lg:items-start lg:gap-10 ">
+            <div className="space-y-12 place-self-start lg:w-full lg:flex lg:flex-col lg:justify-start lg:items-start">
               <div className="space-y-6 lg:text-left hidden lg:block mt-20">
                 <h4 className="font-clashDisplay text-xl font-bold lg:text-[32px] leading-snug">
                   Privacy Policy and <br />{" "}
@@ -37,7 +37,7 @@ function PrivacyPolicy() {
                   participant
                 </p>
               </div>
-              <div className="border-[2px] px-3 border-solid border-customPurple rounded-lg py-8 w-full max-w-[680px] place-self-center flex flex-col items-center lg:text-base md:px-2 md:w-full lg:px-14 lg:py-20 lg:place-self-start">
+              <div className="border-[2px] px-3 border-solid border-customPurple rounded-lg py-8 w-full place-self-center flex flex-col items-center lg:text-base md:px-2 md:w-full lg:px-8 lg:py-20 lg:place-self-start">
                 <div className="text-center text-xs lg:text-base leading-[26px] w-full md:w-full lg:text-left">
                   At getlinked tech Hackathon 1.0, we value your privacy and are
                   committed to protecting your personal information. This
@@ -84,7 +84,7 @@ function PrivacyPolicy() {
                 </div>
               </div>
             </div>
-            <div className="hidden lg:flex lg:w-1/2 lg:items-center lg:justify-center">
+            <div className="hidden lg:flex lg:w-full lg:items-center lg:justify-center">
               <div className="relative w-full max-w-[520px] h-[880px]">
                 <img className="absolute inset-0 w-full h-full object-contain" src={vector} alt="vector" />
                 <img
