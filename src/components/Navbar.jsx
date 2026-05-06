@@ -29,9 +29,9 @@ function Navbar() {
 
   return (
     <>
-      <div className="w-full fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-customPurple-darker/80 transition-all duration-300 border-b border-customPurple border-opacity-30">
+      <div className="w-full fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-customPurple-darker/80 transition-all duration-300 border-b border-customPurple border-opacity-30 max-w-[1380px] mx-auto">
         <nav className="w-full md:px-10 px-6 py-6 list-none flex items-center justify-between text-sm lg:px-16">
-          <li className="text-xl font-bold text-white lg:text-3xl xl:text-4xl">
+          <li className="text-xl font-bold font-clashDisplay text-white lg:text-3xl xl:text-4xl">
             <a href="#hero">
               get<span className="text-customPurple">linked</span>
             </a>

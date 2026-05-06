@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import leftFlare from "../../assets/contactFlare2.svg"
 import rightFlare from "../../assets/contactFlare1.svg"
+import { useToast } from "../../hooks/use-toast";
 
 const schema = yup.object().shape({
   teamsName: yup.string().required("Name is required"),
@@ -23,10 +24,12 @@ const schema = yup.object().shape({
 });
 
 function Registration() {
+  const { toast } = useToast();
 
   const { 
     register, 
     handleSubmit, 
+    reset,
     formState: { errors } 
   } = useForm({
     resolver: yupResolver(schema),
@@ -36,6 +39,11 @@ function Registration() {
   const onSubmit = ( data) => {
     console.log(data)
     console.log("form submitted"); // Handle form data
+    toast({
+      title: "Registration Successful!",
+      description: "Your registration has been submitted successfully.",
+    });
+    reset();
   };
 
   return (
@@ -45,7 +53,7 @@ function Registration() {
       <div className="hidden w-full lg:grid place-items-start pr-10 xl:pr-20">
       <img className="w-full relative z-10 transition-transform duration-700 hover:scale-105" src={designer} alt="designer" />
       </div>
-      <div className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-[0_0_30px_rgba(212,52,254,0.1)] p-2 md:p-6 lg:p-8 transition-all duration-500 hover:shadow-[0_0_50px_rgba(212,52,254,0.2)] hover:-translate-y-1 relative z-10">
+      <div className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-[0_0_30px_rgba(212,52,254,0.1)] p-3 sm:p-5 md:p-6 lg:p-8 transition-all duration-500 hover:shadow-[0_0_50px_rgba(212,52,254,0.2)] hover:-translate-y-1 relative z-10">
       <div className="w-full">
         <div className="text-left">
           <h6 className="text-customPurple font-clashDisplay font-bold md:font-semibold md:text-[32px] lg:text-4xl">
@@ -103,7 +111,7 @@ function Registration() {
                 <p className="text-xs text-red-500 mt-1">{errors.projectTopic?.message}</p> 
               </div>
             </div>
-            <div className="w-full grid grid-cols-2 gap-4 mt-5">
+            <div className="w-full grid sm:grid-cols-2 gap-4 mt-5">
               <div className="text-[13px] lg:text-[15px] w-full group">
                 <label className="mb-2 block font-medium">Category</label>
                 <select
@@ -115,8 +123,29 @@ function Registration() {
                   <option value="" selected disabled className="bg-customPurple-darker">
                     Select your category
                   </option>
-                  <option value="category1" className="bg-customPurple-darker">
-                    category 1
+                  <option value="web-development" className="bg-customPurple-darker">
+                    Web Development
+                  </option>
+                  <option value="mobile-app" className="bg-customPurple-darker">
+                    Mobile App Development
+                  </option>
+                  <option value="data-science-ai" className="bg-customPurple-darker">
+                    Data Science / AI
+                  </option>
+                  <option value="game-development" className="bg-customPurple-darker">
+                    Game Development
+                  </option>
+                  <option value="iot-hardware" className="bg-customPurple-darker">
+                    IoT / Hardware
+                  </option>
+                  <option value="blockchain" className="bg-customPurple-darker">
+                    Blockchain
+                  </option>
+                  <option value="ui-ux-design" className="bg-customPurple-darker">
+                    UI/UX Design
+                  </option>
+                  <option value="cybersecurity" className="bg-customPurple-darker">
+                    Cybersecurity
                   </option>
                 </select>
                 <p className="text-xs text-red-500 mt-1">{errors.category?.message}</p> 
@@ -131,14 +160,24 @@ function Registration() {
                   {...register("groupSize")}
 
                 >
-                  <optgroup className="text-sm bg-customPurple-darker">
-                    <option value="" selected disabled>
-                      Select
-                    </option>
-                    <option value="test" >
-                      Test
-                    </option>
-                  </optgroup>
+                  <option value="" selected disabled className="bg-customPurple-darker">
+                    Select group size
+                  </option>
+                  <option value="1" className="bg-customPurple-darker">
+                    1
+                  </option>
+                  <option value="2-4" className="bg-customPurple-darker">
+                    2-4
+                  </option>
+                  <option value="5-7" className="bg-customPurple-darker">
+                    5-7
+                  </option>
+                  <option value="8-10" className="bg-customPurple-darker">
+                    8-10
+                  </option>
+                  <option value="10+" className="bg-customPurple-darker">
+                    10+
+                  </option>
                 </select>
                 <p className="text-xs text-red-500 mt-1">{errors.groupSize?.message}</p> 
 

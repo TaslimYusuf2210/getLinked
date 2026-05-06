@@ -8,8 +8,8 @@ import { FaLocationDot } from "react-icons/fa6";
 function Footer() {
   return (
     <div className="bg-[#100B20] text-left grid font-montserrat py-12 text-xs lg:text-base">
-      <div className="w-full max-w-[90%] md:max-w-none place-self-center flex flex-col gap-8 md:flex-row md:px-10 px-4 lg:p-16">
-        <div className="w-full">
+      <div className="w-full place-self-center flex flex-col justify-center items-center sm:items-start gap-8 sm:flex-row md:px-10 px-6 lg:px-16">
+        <div className="w-full flex flex-col justify-start items-center sm:items-start text-left">
           <h3 className="text-xl font-clashDisplay font-semibold lg:text-3xl">
             get<span className="text-customPurple">linked</span>
           </h3>
@@ -20,14 +20,14 @@ function Footer() {
             young and talented individuals in the field <br />
             of technology
           </p>
-          <div className="flex gap-3 items-start w-full mt-10">
+          <div className="flex gap-3 justify-center sm:justify-start w-full mt-10">
             <div  className="border-[0px] border-customPurple border-r-2 pr-3">
               Terms of Use
             </div>
             <p>Privacy Policy</p>
           </div>
         </div>
-        <div className=" w-full flex justify-start md:justify-center">
+        <div className=" w-full flex item-center sm:items-start justify-center md:justify-center">
           <div className="grid grid-cols-1">
             <h6 className="text-customPurple text-sm font-semibold lg:text-xl">Useful Links</h6>
             <ul className="list-none leading-8">
@@ -45,7 +45,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-start md:justify-end">
+        <div className="w-full flex justify-center md:justify-end">
           <div className="grid grid-cols-1">
               <h6 className="text-customPurple text-sm font-semibold lg:text-xl">Contact Us</h6>
               <div className="flex gap-4 mt-2">

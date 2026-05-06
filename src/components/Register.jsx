@@ -44,7 +44,7 @@ function Register() {
       <div className="lg:px-16 md:px-10 md:flex md:justify-between md:w-full  hidden">
         <div></div>
         <div>
-          <p className="text-base italic text-white font-bold mt-6 font-montserrat lg:text-2xl xl:text-4xl">
+          <p className="text-base italic text-white font-bold xl:mt-20 lg:mt-18 font-montserrat lg:text-2xl xl:text-4xl">
             Igniting a Revolution in HR Innovation
           </p>
           <img
@@ -110,7 +110,7 @@ function Register() {
         <div className="xl:w-full lg:ml-8">
           <img className="w-full mt-12 lg:w-[90%] lg:mx-auto max-w-full relative z-10" src={man} alt="man" />
           <img
-            className="absolute left-1/2 -translate-x-1/2 top-[50%] md:top-1/4 w-[90%] md:w-[35%] lg:w-[45%] md:left-[60%] lg:top-[15%] xl:max-w-[700px] pointer-events-none z-20"
+            className="absolute left-1/2 -translate-x-1/2 top-[50%] md:top-1/4 w-[90%] md:w-[35%] lg:w-[45%] md:left-[60%]  xl:max-w-[700px] pointer-events-none z-20"
             src={crystalball}
             alt="crystalball"
           />

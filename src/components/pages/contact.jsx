@@ -6,6 +6,7 @@ import Glow from "../../components/Glow";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useToast } from "../../hooks/use-toast";
 
 const schema = yup.object().shape({
   teamsName: yup.string().required("Please enter the team's name"),
@@ -27,6 +28,7 @@ const secondSchema = yup.object().shape({
 });
 
 function Contact() {
+  const { toast } = useToast();
   const {
     register,
     handleSubmit,
@@ -48,88 +50,98 @@ function Contact() {
   const onSubmit = (data) => {
     console.log(data);
     console.log("form submitted"); // Handle form data
+    toast({
+      title: "Message Sent!",
+      description: "Your message has been sent successfully.",
+    });
   };
 
-  const onSecondSubmit = () => {
+  const onSecondSubmit = (data) => {
     console.log(data);
     console.log("second form submitted")
+    toast({
+      title: "Message Sent!",
+      description: "Your message has been sent successfully.",
+    });
   }
 
   return (
     <div id="contact" className="font-montserrat relative min-h-screen pb-10 overflow-hidden">
-      <div className="grid gap-10 place-items-center text-left px-16 md:hidden">
-        <div className="w-full ">
-          <p className="text-xl leading-6 text-customPurple font-clashDisplay mt-10">
-            Questions or need <br />
-            assistance? <br />
-            Let us know about it
-          </p>
-          <p className="text-xs mt-8">
-            Email us below to any question related <br />
-            to our event
-          </p>
-        </div>
-        <div className="w-full text-center mt-6">
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="grid grid-cols-1 gap-6 w-full bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-xl transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,52,254,0.15)] hover:-translate-y-1"
-            action=""
-          >
-            <div className="text-left">
-              <input
-                className="input-border px-6 text-base placeholder-white"
-                placeholder="Team's Name"
-                type="text"
-                {...register("teamsName")}
-              />
-              <p className="text-xs text-red-500">{errors.teamsName?.message}</p>
-            </div>
+      {/* <div className="w-full flex justify-center items-center"> */}
+        <div className="grid gap-10 place-items-center text-left sm:px-16 px-6 md:hidden">
+          <div className="w-full ">
+            <p className="text-xl leading-6 text-customPurple font-clashDisplay mt-10">
+              Questions or need <br />
+              assistance? <br />
+              Let us know about it
+            </p>
+            <p className="text-xs mt-8">
+              Email us below to any question related <br />
+              to our event
+            </p>
+          </div>
+          <div className="w-full text-center mt-6">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="grid grid-cols-1 gap-6 w-full bg-white/5 backdrop-blur-md border border-white/10 px-3 py-8 rounded-2xl shadow-xl transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,52,254,0.15)] hover:-translate-y-1"
+              action=""
+            >
+              <div className="text-left">
+                <input
+                  className="input-border px-6 text-base placeholder-white"
+                  placeholder="Team's Name"
+                  type="text"
+                  {...register("teamsName")}
+                />
+                <p className="text-xs text-red-500">{errors.teamsName?.message}</p>
+              </div>
 
-            <div className="text-left">
-              <input
-                className="input-border px-6 placeholder-white"
-                placeholder="Topic"
-                type="text"
-                {...register("topic")}
-              />
-              <p className="text-xs text-red-500">{errors.topic?.message}</p>
-            </div>
+              <div className="text-left">
+                <input
+                  className="input-border px-6 placeholder-white"
+                  placeholder="Topic"
+                  type="text"
+                  {...register("topic")}
+                />
+                <p className="text-xs text-red-500">{errors.topic?.message}</p>
+              </div>
 
-            <div className="text-left">
-              <input
-                className="input-border px-6 placeholder-white"
-                placeholder="Email"
-                type="email"
-                {...register("email")}
-              />
-              <p className="text-xs text-red-500">{errors.email?.message}</p>
-            </div>
+              <div className="text-left">
+                <input
+                  className="input-border px-6 placeholder-white"
+                  placeholder="Email"
+                  type="email"
+                  {...register("email")}
+                />
+                <p className="text-xs text-red-500">{errors.email?.message}</p>
+              </div>
 
-            <div className="text-left">
-              <textarea
-                className="input-border h-40 px-6 pt-4 align-text-top placeholder-white"
-                placeholder="Message"
-                type="text"
-                {...register("message")}
-              />
-              <p className="text-xs text-red-500">{errors.message?.message}</p>
-            </div>
+              <div className="text-left">
+                <textarea
+                  className="input-border h-40 px-6 pt-4 align-text-top placeholder-white"
+                  placeholder="Message"
+                  type="text"
+                  {...register("message")}
+                />
+                <p className="text-xs text-red-500">{errors.message?.message}</p>
+              </div>
 
-            <div className="w-full">
-              <button className="button w-44 py-[18px]">Submit</button>
+              <div className="w-full">
+                <button className="button w-44 py-[18px]">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div className="text-center flex flex-col gap-4 ">
+            <p className="text-customPurple text-xs">Share on</p>
+            <div className="flex gap-2 text-sm">
+              <FaInstagram />
+              <FaXTwitter />
+              <FaFacebookF />
+              <FaLinkedinIn />
             </div>
-          </form>
-        </div>
-        <div className="text-center flex flex-col gap-4 ">
-          <p className="text-customPurple text-xs">Share on</p>
-          <div className="flex gap-2 text-sm">
-            <FaInstagram />
-            <FaXTwitter />
-            <FaFacebookF />
-            <FaLinkedinIn />
           </div>
         </div>
-      </div>
+      {/* </div> */}
       
       <Glow size="lg" className="bottom-[-10%] right-[-10%] opacity-70" />
 

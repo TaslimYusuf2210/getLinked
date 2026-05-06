@@ -21,7 +21,7 @@ function Home() {
         <PricesAndReward/>
         <PartnersAndSponsors/>
         <PrivacyPolicy/>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
    );
 }
